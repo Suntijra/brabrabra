@@ -1,0 +1,420 @@
+
+        /* ///home slidedown */
+        .overlay_home_shop{
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0vh;
+        }
+        .overlay-slidedown_home_shop.open {
+            visibility: visible;
+            -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+            -webkit-transition: -webkit-transform 0.4s ease-in-out;
+            transition: transform 0.4s ease-in-out;
+            z-index: 9;
+
+        }
+        .overlay-slidedown_home_shop {
+            visibility: hidden;
+            -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+            -webkit-transition: -webkit-transform 0.4s ease-in-out, visibility 0s 0.4s;
+            transition: transform 0.4s ease-in-out, visibility 0s 0.4s;
+        }
+         /* ///home slidedown */
+
+
+
+
+        /* หน้าลงทะเบียน หรือ ล็อคอิน 2 */
+        .forregisandlogin{
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0vh;
+     
+        }
+        .overlay-slidedown_forregisandlogin.open {
+        visibility: visible;
+        -webkit-transform: translateX(0%);
+        transform: translateX(0%);
+        -webkit-transition: -webkit-transform 0.4s ease-in-out;
+        transition: transform 0.4s ease-in-out;
+        }
+        .overlay-slidedown_forregisandlogin {
+        visibility: hidden;
+        -webkit-transform: translateX(100%);
+        transform: translateX(100%);
+        -webkit-transition: -webkit-transform 0.4s ease-in-out, visibility 0s 0.4s;
+        transition: transform 0.4s ease-in-out, visibility 0s 0.4s;
+        }
+        /* หน้าลงทะเบียน หรือ ล็อคอิน 2  */
+
+
+
+
+        /* หน้าลงทะเบียน หรือ ล็อคอิน 1  */
+         .overlay_reg1{
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0vh;
+        }
+        .overlay-slidedown_reg1.open {
+        visibility: visible;
+        -webkit-transform: translateX(0%);
+        transform: translateX(0%);
+        -webkit-transition: -webkit-transform 0.4s ease-in-out;
+        transition: transform 0.4s ease-in-out;
+        }
+        .overlay-slidedown_reg1 {
+        visibility: hidden;
+        -webkit-transform: translateX(100%);
+        transform: translateX(100%);
+        -webkit-transition: -webkit-transform 0.4s ease-in-out, visibility 0s 0.4s;
+        transition: transform 0.4s ease-in-out, visibility 0s 0.4s;
+        }
+        /* หน้าลงทะเบียน หรือ ล็อคอิน 1  */
+
+
+        
+        /* เลือกลงทะเบียนบุคคลธรรมดา หรือ นิติ  */
+        .overlay_nitiorbukon{
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0vh;
+       
+        }
+        .overlay-slidedown_nitiorbukon.open {
+            visibility: visible;
+            -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+            -webkit-transition: -webkit-transform 0.4s ease-in-out;
+            transition: transform 0.4s ease-in-out;
+        }
+        .overlay-slidedown_nitiorbukon {
+            visibility: hidden;
+            -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+            -webkit-transition: -webkit-transform 0.4s ease-in-out, visibility 0s 0.4s;
+            transition: transform 0.4s ease-in-out, visibility 0s 0.4s;
+        }
+
+        /* เลือกลงทะเบียนบุคคลธรรมดา หรือ นิติ  */
+
+
+
+
+        /* shopinfo */
+        .overlay_shopinfo{
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0vh;
+          
+        }
+        .overlay-slidedown_shopinfo.open {
+        visibility: visible;
+        -webkit-transform: translateX(0%);
+        transform: translateX(0%);
+        -webkit-transition: -webkit-transform 0.4s ease-in-out;
+        transition: transform 0.4s ease-in-out;
+        }
+        .overlay-slidedown_shopinfo {
+        visibility: hidden;
+        -webkit-transform: translateX(100%);
+        transform: translateX(100%);
+        -webkit-transition: -webkit-transform 0.4s ease-in-out, visibility 0s 0.4s;
+        transition: transform 0.4s ease-in-out, visibility 0s 0.4s;
+        }
+
+        /* shopsaka */
+        .overlay_shopsaka{
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0vh;
+        
+        }
+        .overlay-slidedown_shopsaka.open {
+        visibility: visible;
+        -webkit-transform: translateX(0%);
+        transform: translateX(0%);
+        -webkit-transition: -webkit-transform 0.4s ease-in-out;
+        transition: transform 0.4s ease-in-out;
+        }
+        .overlay-slidedown_shopsaka {
+        visibility: hidden;
+        -webkit-transform: translateX(100%);
+        transform: translateX(100%);
+        -webkit-transition: -webkit-transform 0.4s ease-in-out, visibility 0s 0.4s;
+        transition: transform 0.4s ease-in-out, visibility 0s 0.4s;
+        }
+
+        /* shopwithdrw */
+        .overlay_shopwithdrw{
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0vh;
+       
+        }
+        .overlay-slidedown_shopwithdrw.open {
+        visibility: visible;
+        -webkit-transform: translateX(0%);
+        transform: translateX(0%);
+        -webkit-transition: -webkit-transform 0.4s ease-in-out;
+        transition: transform 0.4s ease-in-out;
+        }
+        .overlay-slidedown_shopwithdrw {
+        visibility: hidden;
+        -webkit-transform: translateX(100%);
+        transform: translateX(100%);
+        -webkit-transition: -webkit-transform 0.4s ease-in-out, visibility 0s 0.4s;
+        transition: transform 0.4s ease-in-out, visibility 0s 0.4s;
+        }
+
+
+        /* shopwqrcode */
+        .overlay_shopcreateQR{
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 0vh;
+     
+        }
+        .overlay-slidedown_shopcreateQR.open {
+        visibility: visible;
+        -webkit-transform: translateX(0%);
+        transform: translateX(0%);
+        -webkit-transition: -webkit-transform 0.4s ease-in-out;
+        transition: transform 0.4s ease-in-out;
+        }
+        .overlay-slidedown_shopcreateQR {
+        visibility: hidden;
+        -webkit-transform: translateX(100%);
+        transform: translateX(100%);
+        -webkit-transition: -webkit-transform 0.4s ease-in-out, visibility 0s 0.4s;
+        transition: transform 0.4s ease-in-out, visibility 0s 0.4s;
+        }
+
+        /* see report sell */
+        .overlay_shop_seereportsell{
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 0vh;
+       
+        }
+        .overlay-slidedown_shop_seereportsell.open {
+        visibility: visible;
+        -webkit-transform: translateX(0%);
+        transform: translateX(0%);
+        -webkit-transition: -webkit-transform 0.4s ease-in-out;
+        transition: transform 0.4s ease-in-out;
+        }
+        .overlay-slidedown_shop_seereportsell {
+        visibility: hidden;
+        -webkit-transform: translateX(100%);
+        transform: translateX(100%);
+        -webkit-transition: -webkit-transform 0.4s ease-in-out, visibility 0s 0.4s;
+        transition: transform 0.4s ease-in-out, visibility 0s 0.4s;
+        }
+
+        /* log out */
+        .overlay_logout{
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 0vh;
+       
+        }
+        .overlay-slidedown_logout.open {
+        visibility: visible;
+        -webkit-transform: translateY(0%);
+        transform: translateY(0%);
+        -webkit-transition: -webkit-transform 0.4s ease-in-out;
+        transition: transform 0.4s ease-in-out;
+        }
+        .overlay-slidedown_logout {
+        visibility: hidden;
+        -webkit-transform: translateY(100%);
+        transform: translateY(100%);
+        -webkit-transition: -webkit-transform 0.4s ease-in-out, visibility 0s 0.4s;
+        transition: transform 0.4s ease-in-out, visibility 0s 0.4s;
+        }
+
+
+        
+        /* log in to บุคคล */
+        .overlay_steptoregisbukon{
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 0vh;
+        z-index: 999999;
+        }
+        .overlay-slidedown_steptoregisbukon.open {
+        visibility: visible;
+        -webkit-transform: translateX(0%);
+        transform: translateX(0%);
+        -webkit-transition: -webkit-transform 0.4s ease-in-out;
+        transition: transform 0.4s ease-in-out;
+        }
+        .overlay-slidedown_steptoregisbukon {
+        visibility: hidden;
+        -webkit-transform: translateX(100%);
+        transform: translateX(100%);
+        -webkit-transition: -webkit-transform 0.4s ease-in-out, visibility 0s 0.4s;
+        transition: transform 0.4s ease-in-out, visibility 0s 0.4s;
+        }
+
+
+         /* ข้อตกลง บุคคล */
+        .overlay_agreement{
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 0vh;
+       
+        }
+        .overlay-slidedown_agreement.open {
+        visibility: visible;
+        -webkit-transform: translateX(0%);
+        transform: translateX(0%);
+        -webkit-transition: -webkit-transform 0.4s ease-in-out;
+        transition: transform 0.4s ease-in-out;
+        }
+        .overlay-slidedown_agreement {
+        visibility: hidden;
+        -webkit-transform: translateX(100%);
+        transform: translateX(100%);
+        -webkit-transition: -webkit-transform 0.4s ease-in-out, visibility 0s 0.4s;
+        transition: transform 0.4s ease-in-out, visibility 0s 0.4s;
+        }
+
+        /* ขoverlay_login */
+        .overlay_login{
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 0vh;
+     
+        }
+        .overlay-slidedown_login.open {
+        visibility: visible;
+        -webkit-transform: translateX(0%);
+        transform: translateX(0%);
+        -webkit-transition: -webkit-transform 0.4s ease-in-out;
+        transition: transform 0.4s ease-in-out;
+        }
+        .overlay-slidedown_login {
+        visibility: hidden;
+        -webkit-transform: translateX(100%);
+        transform: translateX(100%);
+        -webkit-transition: -webkit-transform 0.4s ease-in-out, visibility 0s 0.4s;
+        transition: transform 0.4s ease-in-out, visibility 0s 0.4s;
+        }
+
+        /* otp */
+        .overlay_otp_bukon{
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 0vh;
+  
+        }
+        .overlay-slidedown_otp_bukon.open {
+        visibility: visible;
+        -webkit-transform: translateX(0%);
+        transform: translateX(0%);
+        -webkit-transition: -webkit-transform 0.4s ease-in-out;
+        transition: transform 0.4s ease-in-out;
+        }
+        .overlay-slidedown_otp_bukon {
+        visibility: hidden;
+        -webkit-transform: translateX(100%);
+        transform: translateX(100%);
+        -webkit-transition: -webkit-transform 0.4s ease-in-out, visibility 0s 0.4s;
+        transition: transform 0.4s ease-in-out, visibility 0s 0.4s;
+        }
+
+
+        /* tutorial */
+        .overlay_tutorial{
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 0vh;
+        z-index: 1;
+   
+        }
+        .overlay-slidedown_tutorial.open {
+        visibility: visible;
+        -webkit-transform: translateX(0%);
+        transform: translateX(0%);
+        -webkit-transition: -webkit-transform 0.4s ease-in-out;
+        transition: transform 0.4s ease-in-out;
+        }
+        .overlay-slidedown_tutorial {
+        visibility: hidden;
+        -webkit-transform: translateX(100%);
+        transform: translateX(100%);
+        -webkit-transition: -webkit-transform 0.4s ease-in-out, visibility 0s 0.4s;
+        transition: transform 0.4s ease-in-out, visibility 0s 0.4s;
+        }
+
+
+        /*  ไปสมัคร maxme ก่อน */
+        .overlay_regislinktomaxme{
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 0vh;
+        z-index: 1;
+    
+        }
+        .overlay-slidedown_regislinktomaxme.open {
+        visibility: visible;
+        -webkit-transform: translateX(0%);
+        transform: translateX(0%);
+        -webkit-transition: -webkit-transform 0.4s ease-in-out;
+        transition: transform 0.4s ease-in-out;
+        }
+        .overlay-slidedown_regislinktomaxme {
+        visibility: hidden;
+        -webkit-transform: translateX(100%);
+        transform: translateX(100%);
+        -webkit-transition: -webkit-transform 0.4s ease-in-out, visibility 0s 0.4s;
+        transition: transform 0.4s ease-in-out, visibility 0s 0.4s;
+        }
+
+
+     
+
+         /*  shop กรอกข้อมูลร้านค้า 1/3 */
+         .overlay_detailmerchant_bukon1{
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0vh;
+            z-index: 1;
+        
+            }
+            .overlay-slidedown_detailmerchant_bukon1.open {
+            visibility: visible;
+            -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+            -webkit-transition: -webkit-transform 0.4s ease-in-out;
+            transition: transform 0.4s ease-in-out;
+            }
+            .overlay-slidedown_rdetailmerchant_bukon1 {
+            visibility: hidden;
+            -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+            -webkit-transition: -webkit-transform 0.4s ease-in-out, visibility 0s 0.4s;
+            transition: transform 0.4s ease-in-out, visibility 0s 0.4s;
+            }
+    

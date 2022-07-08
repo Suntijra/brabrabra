@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+        integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+        crossorigin="anonymous">
+
+
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width"/>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    
+    <link rel="stylesheet" type="text/css" href="./slick-1.8.1/slick/slick.css"/>
+    <!-- <link rel="stylesheet" type="text/css" href="./slick-step.css"/> -->
+    <link rel="stylesheet" type="text/css" href="./slick-1.8.1/slick/slick-theme.css"/>
+    <script type="text/javascript" src="./slick-1.8.1/slick/slick.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="./index.css"/>
+    <link rel="stylesheet" type="text/css" href="./globle_newmerchant.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt&display=swap" rel="stylesheet">
+    <link href="http://fonts.cdnfonts.com/css/gilroy-bold" rel="stylesheet">
+    
+    <title>template</title>
+
+    <style>
+      
+      /* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;500;600;800&display=swap'); */
+
+      .DBHeaventv3 {
+        font-family: 'DBHeaventv3';
+      }
+      .DBHeaventv3B {
+        font-family: 'DBHeaventv3';
+      }
+      /* .DBHelvethaicaX {
+        font-family: 'DBHelvethaicaX';
+      } */
+
+      /* @font-face {
+        font-family: DBHelvethaicaX;
+        src: url(./Fonts/DBHelvethaicaX.ttf);
+      }
+      @font-face {
+        font-family: DBHelvethaicaXBd;
+        src: url(./Fonts/DBHelvethaicaXBd.ttf);
+      }
+      @font-face {
+        font-family: DBHelvethaicaXMed;
+        src: url(./Fonts/DBHelvethaicaXMed.ttf);
+      } */
+
+      @font-face {
+        font-family: DBHeaventv3;
+        src: url(./Fonts/DBHeaventv3.2.ttf);
+      }
+      @font-face {
+        font-family: DBHeaventv3B;
+        src: url(./Fonts/DBHeaventBdv3.2.ttf);
+      }
+      /* @font-face {
+        font-family: myriadproregular;
+        src: url(./Fonts/MyriadPro-Regular.otf);
+      } */
+
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        font-size: 100%;
+        font-family: DBHeaventv3;
+        font-weight: 300;
+      }
+
+      div,
+      section,
+      span,
+      ul,
+      li,
+      a,
+      header {
+        box-sizing: border-box;
+      }
+
+    </style>
+
+    <style>
+      .boxEStamphover:hover {
+      border: 5px solid #04A54D !important;
+      }
+
+      .boxEStamphover:hover .btE-Stamp {
+        background: linear-gradient(0deg, rgba(30,70,70,1) 0%, rgba(4,165,77,1) 100%) !important;
+      }
+
+    </style>
+    <style>
+      .textcolor:hover {
+        color: #04A54D !important;
+        /* src: url(./WebsiteImages/maxcard_สิทธิประโยชน์/glass_green.png); */
+      }
+      .changeimg:hover{
+        filter: grayscale(90%) !important;
+      }
+    </style>
+
+    <!-- slick-slide -->
+    <style>
+      .slick-slide{
+        margin: unset;
+      }
+      .slick-dots li.slick-active button:before{
+        color: #64DA00;
+      }
+      .slick-dots li button:before{
+        font-family: 'slick';
+        font-size: 7px;
+        line-height: 20px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 20px;
+        height: 20px;
+        content: '•';
+        text-align: center;
+        opacity: .25;
+        color: gray;
+        -webkit-font-smoothing: antialiased;
+      }
+      .slick-dots li button{
+        padding: 0;
+      }
+      .slick-prev
+      {
+          left: -6vw;
+          z-index: 9;
+      }
+      [dir='rtl'] .slick-prev
+      {
+          right: -120px;
+          left: auto;
+      }
+      .slick-prev:before
+      {
+          content:none;
+      }
+      [dir='rtl'] .slick-prev:before
+      {
+          content:none;
+      }
+
+      .slick-next
+      {
+          right: -3vw;
+      }
+      [dir='rtl'] .slick-next
+      {
+          right: auto;
+          left: -25px;
+      }
+      .slick-next:before
+      {
+          content: none;
+      }
+      [dir='rtl'] .slick-next:before
+      {
+          content: none;
+      }
+      .font_Prompt{
+            font-family: 'Prompt', sans-serif;
+        }
+       /*slick slide*/
+       .slick-dots li.slick-active button:before{
+        color: #F5804A;
+       
+      }
+      .slick-dots li button:before{
+        font-family: 'slick';
+        font-size: 8px;
+        line-height: 20px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 20px;
+        height: 20px;
+        content: '•';
+        text-align: center;
+        opacity: .25;
+        color: gray;
+        -webkit-font-smoothing: antialiased;
+      }
+      .slick-dots
+      {
+          position: absolute;
+          bottom: -40px;
+          display: block;
+          width: 100%;
+          padding: 0;
+          margin: 0;
+          list-style: none;
+          text-align: center;
+      }
+
+    </style>
+
+
+  </head>
+
+  <body>
+
+   <div  class="container bg1_tutorial">
+        
+      <div class="body_tutorial" >
+        <p class="h4 font_Prompt skip_tutorial" >ข้าม</p>
+        <div class="skip_button">
+          <i class="fa-solid fa-xmark"></i>
+        </div>
+      </div>
+        
+        <div class="autoplay slide_tutorial" >
+          <img style="width: 100%;" src="./imgs/regis1.png" alt="">
+          <img style="width: 100%;" src="./imgs/regis2.png" alt="">
+          <img style="width: 100%;" src="./imgs/regis3.png" alt="">
+        </div>
+
+        <div >
+          <div class="salmon_outlin_long_button_tutorial h3  " >
+              <p class="BB font_Prompt primary-text-white ">เริ่มต้นใช้งาน</p>
+          </div>
+      </div>
+
+   </div>
+ 
+
+  
+
+    
+    <script>
+        $('.autoplay').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 2000,
+        dots:true,
+        infinite: true,
+      });
+    </script>
+  </body>
+</html>

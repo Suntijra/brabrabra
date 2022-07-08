@@ -1,0 +1,36 @@
+/* <!-- slick-step --> */
+  .slick-prev{
+    left: -50px;
+  }
+  .slick-next{
+    right: -50px;
+  }
+  .slick-prev, .slick-next{
+    top: 35%;
+  }
+  .slick-prev:before, .slick-next:before{
+    color: transparent;
+    font-size: 8.5vw;
+  }
+  .slick-prev:before {
+      /* content: '◀'; */
+      background: url('https://api.iconify.design/bxs/left-arrow.svg?color=%2363da02') no-repeat center center / contain;
+  }
+  .slick-next:before {
+      /* content: '▶'; */
+      background: url('https://api.iconify.design/bxs/right-arrow.svg?color=%2363da02') no-repeat center center / contain;
+  }
+  
+  .slick-dots li.slick-active button:before{
+    color: #63DA02;
+  }
+  .slick-dots li button:before{
+    font-size: 9px;
+  }
+  .slick-dots li{
+    margin: 0;
+  }
+  .slick-dots{
+    bottom: 28vw;
+  }
+/* <!--end slick-step --> */

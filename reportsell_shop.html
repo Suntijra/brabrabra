@@ -1,0 +1,979 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width"/>
+        <title>รายงานการขาย</title>
+        <!-- font -->
+         <!-- semibold600 -->
+         <link rel="preconnect" href="https://fonts.googleapis.com/%22%3E" >
+         <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+         <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@600&display=swap" rel="stylesheet">
+
+        <!-- bold 900 -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,400;0,700;0,800;0,900;1,800&display=swap" rel="stylesheet">
+       
+        <!-- <link href="http://fonts.cdnfonts.com/css/gilroy-bold" rel="stylesheet"> -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Prompt&display=swap" rel="stylesheet">
+       
+        <!-- css -->
+        <link rel="stylesheet" type="text/css" href="./globle_newmerchant.css"/>
+        <script type="text/javascript" href="./globle_newmerchant.js"></script>
+ 
+
+        <!-- script -->
+        <script type="text/javascript" src="./slick-1.8.1/slick/slick.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+        <!-- fonawesome -->
+        <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+        
+
+    </head>
+    <style>
+        .font_Prompt{
+            font-family: 'Prompt', sans-serif;
+        }
+        .prompt600{
+            font-weight: 600;
+        }
+        html {
+        scroll-behavior: smooth;
+        }
+    </style>
+    
+  
+    <body>
+        <div id="bg_shadow" class="box_shadow reportsell_06_shop"  ></div>
+        <div class="container bg_white_reportsell reportsell_p1 reportsell_01_shop">
+                <div class="head_button_sell just_spacebetween reportsell_02_shop">
+                    <!-- ปุ่มกลับ -->
+                    <div class="backReportsell_button">
+                        <i class="fas fa-arrow-left" ></i>
+                    </div> 
+                    <!-- ปุ่มโฮม -->
+                    <div class="back_button backReportsell_button">
+                        <i class="fas fa-arrow-left" ></i>
+                    </div> 
+                </div>
+
+                <div class="reportsell_head1detail" >
+                    <p class="h1 font_Prompt BB primary-text-salmon"> รายงานการขาย</p>
+                </div>
+
+                <!-- คุมเลื่อนๆ -->
+                <div class="reportsell_03_shop">
+                    <div class="reportsell_04_shop">
+                        <div class="reportsell_05_shop">  
+                            <div id="income_tap-1"  onclick="menutapreportsell(1)" class="reportsell_p2  font_Prompt reportsell active" >
+                            <img src="./imgs/eye1.png" class="reportsell_img" />
+                                <p class="font_Prompt">รายได้</p>
+                            </div>
+                            <div id="withdraw_tap-2" onclick="menutapreportsell(2)" class="reportsell_p2  font_Prompt  reportsell" >
+                                <img src="./imgs/eye1.png" class="reportsell_img" />
+                                <p class="font_Prompt">รายการถอน</p>
+                            </div>
+                            <div id="all_tap-3" onclick="menutapreportsell(3)" class="reportsell_p2  font_Prompt reportsell ">
+                                <img src="./imgs/eye1.png" class="reportsell_img" />
+                                <p class="font_Prompt">ทั้งหมด</p>
+                            </div>
+                        </div> 
+                    </div>  
+                
+            <!-- div detail-->
+                <!-- แทปรายการฝาก -->
+                <div id="income_detail" class="reportsell_07_shop">
+                        <div class="reportsell_08_shop">
+                                    <div class="reportsell_09_shop">
+                                        <p class="h2 BB primary-text-salmon font_Prompt">รายรับรวมวันนี้</p>
+                                        <p class="h0 BB font_Prompt">100,000,000.0</p>
+                                        <p class="h5 font_Prompt">
+                                            <i class="fas fa-arrow-left" ></i> 
+                                            อัพเดตเมื่อ</p>
+                                        <p class="h5_half BB font_Prompt">11 ตุลาคม 2565 เวลา20.25 น.</p>
+                                    </div>
+                                    <div class="reportsell_10_shop">
+                                        <div class="reportsell_11_shop">
+                                            <div class="reportsell_12_shop">
+                                                <p class="h2 BB font_Prompt "> รายรับ</p>
+                                                <p class="h5 BB font_Prompt">  <i class="fas fa-arrow-left" class="reportsell_14_shop"></i>11 ตุลลาคม 2565 เวลา 20.25 น.</p>
+                                            </div>
+                                            <div class="reportsell_13_shop">
+                                                <div onclick="showalert_reportexcell()" class="reportsell_15_shop">
+                                                        <i class="fas fa-arrow-left" ></i>
+                                                        <p class="BB h5 font_Prompt"> Export Excel</p>
+                                                        <div class="reportsell_16_shop">
+                                                            <i class="fas fa-arrow-left" ></i>
+                                                        </div>
+                                                </div>
+                                            </div>
+                                    </div>
+                                </div>    
+                        </div>
+                        <div class="reportsell_17_shop">
+                            <div class="reportsell_18_shop">
+                                <div onclick="showalert_reportfiter()"  class="reportsell_19_shop">
+                                    <i class="fas fa-arrow-left" ></i>
+                                    <p class="BB h5_half font_Prompt"> สำนักงานใหญ่, ตุลาคม 2565</p>
+                                    <div class="reportsell_20_shop">
+                                        <i class="fas fa-arrow-left" ></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="reportsell_21_shop reportsell_26_borderbott_shop" >
+                                <p id="reportdone_sectap1" onclick="all_minitap_shop(1)" class=" h4 font_Prompt textlinener_report">ทั้งหมด</p>
+                                <p id="reportdone_sectap2" onclick="all_minitap_shop(2)" class=" h4 font_Prompt">รายการสำเร็จ</p>
+                                <p id="reportcancel_sectap3" onclick="all_minitap_shop(3)" class=" h4 font_Prompt">รายการยกเลิก</p>
+                            </div>
+                        </div>
+                              
+                            <div class="reportsell_22_shop" >
+                                  <!-- details ทั้งหมด -->
+                                    <div id="all_detail_minitap" class="reportsell_23_shop">
+                                            <div class="reportsell_24_shop ">
+                                                 <!-- 1 สำเร็จ-->
+                                                    <div class="reportsell_25_shop reportsell_26_borderbott_shop">
+                                                        <div class="reportsell_26_shop">
+                                                                <div class="SUCCESS_GREEN BB h5_half font_Prompt reportsell_27_shop">รับชำระ</div>
+                                                                <div class="reportsell_31_shop">
+                                                                        <div class="SUCCESS_GREEN BB h5_half font_Prompt reportsell_28_green_shop"> สำเร็จ</div>
+                                                                </div>
+                                                        </div>
+                                                        <div class="reportsell_29_shop">
+                                                                <p class="h5 font_Prompt">MAX CARD NO.1362663272</p>
+                                                                <p class="h5 font_Prompt">Tel.094-0000-000</p>
+                                                        </div>
+                                                        <div class="reportsell_30_shop">
+                                                            <span class="h5 font_Prompt BB"> <i class="fas fa-arrow-left" ></i>
+                                                                11 ตุลลาคม 2565 เวลา 20.25 น.</span>
+                                                            <p class="h4 BB  font_Prompt">50.00</p>
+                                                        </div>
+                                                    </div>
+                                         </div>   
+                                     </div>
+                                    <div id="reportdone_detail_minitap" class="reportsell_23_shop">
+                                        <div class="reportsell_24_shop ">
+                                            <!-- 1 สำเร็จ-->
+                                            <div class="reportsell_25_shop reportsell_26_borderbott_shop">
+                                                <div class="reportsell_26_shop">
+                                                        <div class="SUCCESS_GREEN BB h5_half font_Prompt reportsell_27_shop">รับชำระ</div>
+                                                        <div class="reportsell_31_shop">
+                                                                <div class="SUCCESS_GREEN BB h5_half font_Prompt reportsell_28_green_shop"> สำเร็จ</div>
+                                                        </div>
+                                                </div>
+                                                <div class="reportsell_29_shop">
+                                                        <p class="h5 font_Prompt">MAX CARD NO.1362663272</p>
+                                                        <p class="h5 font_Prompt">Tel.094-0000-000</p>
+                                                </div>
+                                                <div class="reportsell_30_shop">
+                                                    <span class="h5 font_Prompt BB"> <i class="fas fa-arrow-left" ></i>
+                                                        11 ตุลลาคม 2565 เวลา 20.25 น.</span>
+                                                    <p class="h4 BB  font_Prompt">50.00</p>
+                                                </div>
+                                            </div>
+                                        
+                                             <!-- 1 สำเร็จ-->
+                                             <div class="reportsell_25_shop reportsell_26_borderbott_shop">
+                                                    <div class="reportsell_26_shop">
+                                                            <div class="SUCCESS_GREEN BB h5_half font_Prompt reportsell_27_shop">รับชำระ</div>
+                                                            <div class="reportsell_31_shop">
+                                                                    <div class="SUCCESS_GREEN BB h5_half font_Prompt reportsell_28_green_shop"> สำเร็จ</div>
+                                                            </div>
+                                                    </div>
+                                                    <div class="reportsell_29_shop">
+                                                            <p class="h5 font_Prompt">MAX CARD NO.1362663272</p>
+                                                            <p class="h5 font_Prompt">Tel.094-0000-000</p>
+                                                    </div>
+                                                    <div class="reportsell_30_shop">
+                                                        <span class="h5 font_Prompt BB"> <i class="fas fa-arrow-left" ></i>
+                                                            11 ตุลลาคม 2565 เวลา 20.25 น.</span>
+                                                        <p class="h4 BB  font_Prompt">50.00</p>
+                                                    </div>
+                                             </div>
+                                         </div>  
+                                    </div>
+                                    <div id="reportcancel_detail_minitap" class="reportsell_23_shop">
+                                        <div class="reportsell_24_shop ">
+
+                                            <!-- 2 ยกเลิก-->
+                                            <div class="reportsell_25_shop reportsell_26_borderbott_shop">
+                                                <div class="reportsell_26_shop ">
+                                                        <div class="ERROR_RED BB h5_half font_Prompt reportsell_27_shop" >รับชำระ</div>
+                                                        <div class="reportsell_31_shop">
+                                                                <div class="ERROR_RED BB h5_half font_Prompt reportsell_28_red_shop" > รายการยกเลิก</div>
+                                                        </div>
+                                                </div>
+                                                <div class="reportsell_29_shop">
+                                                        <p class="h5 font_Prompt">MAX CARD NO.1362663272</p>
+                                                        <p class="h5 font_Prompt">Tel.094-0000-000</p>
+                                                </div>
+                                                <div class="reportsell_30_shop">
+                                                    <span class="h5 font_Prompt BB"> <i class="fas fa-arrow-left" ></i>
+                                                        11 ตุลลาคม 2565 เวลา 20.25 น.</span>
+                                                    <p class="h4 BB ERROR_RED font_Prompt">50.00</p>
+                                                </div>
+                                            </div>
+                                           <!-- 2 ยกเลิก-->
+                                           <div class="reportsell_25_shop reportsell_26_borderbott_shop">
+                                                <div class="reportsell_26_shop ">
+                                                        <div class="ERROR_RED BB h5_half font_Prompt reportsell_27_shop" >รับชำระ</div>
+                                                        <div class="reportsell_31_shop">
+                                                                <div class="ERROR_RED BB h5_half font_Prompt reportsell_28_red_shop" > รายการยกเลิก</div>
+                                                        </div>
+                                                </div>
+                                                <div class="reportsell_29_shop">
+                                                        <p class="h5 font_Prompt">MAX CARD NO.1362663272</p>
+                                                        <p class="h5 font_Prompt">Tel.094-0000-000</p>
+                                                </div>
+                                                <div class="reportsell_30_shop">
+                                                    <span class="h5 font_Prompt BB"> <i class="fas fa-arrow-left" ></i>
+                                                        11 ตุลลาคม 2565 เวลา 20.25 น.</span>
+                                                    <p class="h4 BB ERROR_RED font_Prompt">50.00</p>
+                                                </div>
+                                            </div>
+                                            </div>
+                                    </div>
+                                    <!-- details ทั้งหมด -->
+                            </div>                       
+                 </div>
+
+
+                 <!-- แทปรายการถอน -->
+                <div id="withdraw_detail" class="reportsell_01_withd_shop">
+                        <div class="reportsell_02_withd_shop">
+                                    <div class="reportsell_03_withd_shop">
+                                        <p class="h2 BB primary-text-salmon font_Prompt">รายรับรวมวันนี้</p>
+                                        <p class="h0 BB font_Prompt">200,000,000.0</p>
+                                        <p class="h5 font_Prompt">
+                                            <i class="fas fa-arrow-left" ></i> 
+                                            อัพเดตเมื่อ</p>
+                                        <p class="h5_half BB font_Prompt">12 ตุลาคม 2565 เวลา20.25 น.</p>
+                                    </div>
+                                    <div class="reportsell_04_withd_shop">
+                                        <div class="reportsell_05_withd_shop">
+                                            <div class="reportsell_06_withd_shop">
+                                                <p class="h2 BB font_Prompt "> รายรับ</p>
+                                                <p class="h5 BB font_Prompt">  <i class="fas fa-arrow-left" class="reportsell_14_shop"  ></i>11 ตุลลาคม 2565 เวลา 20.25 น.</p>
+                                            </div>
+                                            <div class="reportsell_07_withd_shop">
+                                                <div onclick="showalert_reportexcell()" class="reportsell_08_withd_shop">
+                                                        <i class="fas fa-arrow-left" ></i>
+                                                        <p class="BB h5 font_Prompt"> Export Excel</p>
+                                                        <div class="reportsell_09_withd_shop">
+                                                            <i class="fas fa-arrow-left" ></i>
+                                                        </div>
+                                                </div>
+                                            </div>
+                                    </div>
+                                </div>      
+                        </div>
+                        <div class="reportsell_10_withd_shop">
+                            <div class="reportsell_11_withd_shop">
+                                <div onclick="showalert_reportfiter()" class="reportsell_12_withd_shop">
+                                    <i class="fas fa-arrow-left" ></i>
+                                    <p class="BB h5_half font_Prompt"> สำนักงานใหญ่, ตุลาคม 2565</p>
+                                    <div class="reportsell_13_withd_shop" >
+                                        <i class="fas fa-arrow-left" ></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="reportsell_14_withd_shop reportsell_26_borderbott_shop" >
+                            <p id="reportminitap_sectap1" onclick="all_minitap_withdraw(1)" class=" h4 font_Prompt textlinener_report">ทั้งหมด</p>
+                            <p id="reportminitap_sectap2" onclick="all_minitap_withdraw(2)" class=" h4 font_Prompt">รายการสำเร็จ</p>
+                            <p id="reportminitap_sectap3" onclick="all_minitap_withdraw(3)" class=" h4 font_Prompt">รายการยกเลิก</p>
+                            </div>
+                        </div>
+                              
+                        <div style="width: 100%; " >
+                                <!-- details ทั้งหมด -->
+                                <div id="withdraw_all_minitap" class="reportsell_15_withd_shop">
+                                    <!-- รวม  -->
+                                    <div class="reportsell_16_withd_shop">
+                                             <!-- 1 สำเร็จ-->
+                                             <div class="reportsell_25_shop reportsell_26_borderbott_shop">
+                                                <div class="reportsell_26_shop">
+                                                        <div class="SUCCESS_GREEN BB h5_half font_Prompt reportsell_27_shop">รับชำระ</div>
+                                                        <div class="reportsell_31_shop">
+                                                                <div class="SUCCESS_GREEN BB h5_half font_Prompt reportsell_28_green_shop"> สำเร็จ</div>
+                                                        </div>
+                                                </div>
+                                                <div class="reportsell_29_shop">
+                                                        <p class="h5 font_Prompt">MAX CARD NO.1362663272</p>
+                                                        <p class="h5 font_Prompt">Tel.094-0000-000</p>
+                                                </div>
+                                                <div class="reportsell_30_shop">
+                                                    <span class="h5 font_Prompt BB"> <i class="fas fa-arrow-left" ></i>
+                                                        11 ตุลลาคม 2565 เวลา 20.25 น.</span>
+                                                    <p class="h4 BB  font_Prompt">50.00</p>
+                                                </div>
+                                            </div>
+                                            <!-- 2 ยกเลิก-->
+                                            <div class="reportsell_25_shop reportsell_26_borderbott_shop">
+                                                <div class="reportsell_26_shop ">
+                                                        <div class="ERROR_RED BB h5_half font_Prompt reportsell_27_shop" >รับชำระ</div>
+                                                        <div class="reportsell_31_shop">
+                                                                <div class="ERROR_RED BB h5_half font_Prompt reportsell_28_red_shop" > รายการยกเลิก</div>
+                                                        </div>
+                                                </div>
+                                                <div class="reportsell_29_shop">
+                                                        <p class="h5 font_Prompt">MAX CARD NO.1362663272</p>
+                                                        <p class="h5 font_Prompt">Tel.094-0000-000</p>
+                                                </div>
+                                                <div class="reportsell_30_shop">
+                                                    <span class="h5 font_Prompt BB"> <i class="fas fa-arrow-left" ></i>
+                                                        11 ตุลลาคม 2565 เวลา 20.25 น.</span>
+                                                    <p class="h4 BB ERROR_RED font_Prompt">50.00</p>
+                                                </div>
+                                            </div>
+                                                
+                                    </div>   
+                                </div>
+                                <div id="withdraw_success_minitap"class="reportsell_15_withd_shop" >
+                                    <div class="reportsell_16_withd_shop">
+                                        <!-- 1 สำเร็จ-->
+                                        <div class="reportsell_25_shop reportsell_26_borderbott_shop">
+                                            <div class="reportsell_26_shop">
+                                                    <div class="SUCCESS_GREEN BB h5_half font_Prompt reportsell_27_shop">รับชำระ</div>
+                                                    <div class="reportsell_31_shop">
+                                                            <div class="SUCCESS_GREEN BB h5_half font_Prompt reportsell_28_green_shop"> สำเร็จ</div>
+                                                    </div>
+                                            </div>
+                                            <div class="reportsell_29_shop">
+                                                    <p class="h5 font_Prompt">MAX CARD NO.1362663272</p>
+                                                    <p class="h5 font_Prompt">Tel.094-0000-000</p>
+                                            </div>
+                                            <div class="reportsell_30_shop">
+                                                <span class="h5 font_Prompt BB"> <i class="fas fa-arrow-left" ></i>
+                                                    11 ตุลลาคม 2565 เวลา 20.25 น.</span>
+                                                <p class="h4 BB  font_Prompt">40.00</p>
+                                            </div>
+                                        </div>
+                                          <!-- 1 สำเร็จ-->
+                                          <div class="reportsell_25_shop reportsell_26_borderbott_shop">
+                                            <div class="reportsell_26_shop">
+                                                    <div class="SUCCESS_GREEN BB h5_half font_Prompt reportsell_27_shop">รับชำระ</div>
+                                                    <div class="reportsell_31_shop">
+                                                            <div class="SUCCESS_GREEN BB h5_half font_Prompt reportsell_28_green_shop"> สำเร็จ</div>
+                                                    </div>
+                                            </div>
+                                            <div class="reportsell_29_shop">
+                                                    <p class="h5 font_Prompt">MAX CARD NO.1362663272</p>
+                                                    <p class="h5 font_Prompt">Tel.094-0000-000</p>
+                                            </div>
+                                            <div class="reportsell_30_shop">
+                                                <span class="h5 font_Prompt BB"> <i class="fas fa-arrow-left" ></i>
+                                                    11 ตุลลาคม 2565 เวลา 20.25 น.</span>
+                                                <p class="h4 BB  font_Prompt">50.00</p>
+                                            </div>
+                                        </div>
+                                    </div>  
+                                </div>
+                                <div id="withdraw_cancel_minitap" class="reportsell_15_withd_shop">
+                                    <!-- 2 ยกเลิก-->
+                                    <div class="reportsell_25_shop reportsell_26_borderbott_shop">
+                                        <div class="reportsell_26_shop ">
+                                                <div class="ERROR_RED BB h5_half font_Prompt reportsell_27_shop" >รับชำระ</div>
+                                                <div class="reportsell_31_shop">
+                                                        <div class="ERROR_RED BB h5_half font_Prompt reportsell_28_red_shop" > รายการยกเลิก</div>
+                                                </div>
+                                        </div>
+                                        <div class="reportsell_29_shop">
+                                                <p class="h5 font_Prompt">MAX CARD NO.1362663272</p>
+                                                <p class="h5 font_Prompt">Tel.094-0000-000</p>
+                                        </div>
+                                        <div class="reportsell_30_shop">
+                                            <span class="h5 font_Prompt BB"> <i class="fas fa-arrow-left" ></i>
+                                                11 ตุลลาคม 2565 เวลา 20.25 น.</span>
+                                            <p class="h4 BB ERROR_RED font_Prompt">150.00</p>
+                                        </div>
+                                    </div>
+                                     
+                                </div>
+                                <!-- details ทั้งหมด -->
+                        </div>
+                </div>
+
+                <!-- หน้ารายงานทั้งหมด -->
+                <div id="all_detail" class="reportsell_01_all_shop">
+                        <div class="reportsell_02_all_shop">
+                                    <div class="reportsell_03_all_shop">
+                                        <p class="h2 BB primary-text-salmon font_Prompt">รายรับรวมวันนี้</p>
+                                        <p class="h0 BB font_Prompt">300,000,000.0</p>
+                                        <p class="h5 font_Prompt">
+                                            <i class="fas fa-arrow-left" ></i> 
+                                            อัพเดตเมื่อ</p>
+                                        <p class="h5_half BB font_Prompt">13 ตุลาคม 2565 เวลา20.25 น.</p>
+                                    </div>
+                                    <div class="reportsell_04_all_shop">
+                                        <div class="reportsell_05_all_shop">
+                                            <div class="reportsell_06_all_shop">
+                                                <p class="h2 BB font_Prompt "> รายรับ</p>
+                                                <p class="h5 BB font_Prompt">  <i class="fas fa-arrow-left" class="reportsell_07_all_shop"></i>11 ตุลลาคม 2565 เวลา 20.25 น.</p>
+                                            </div>
+                                            <div class="reportsell_08_all_shop">
+                                                <div onclick="showalert_reportexcell()" class="reportsell_09_all_shop">
+                                                        <i class="fas fa-arrow-left" ></i>
+                                                        <p class="BB h5 font_Prompt"> Export Excel</p>
+                                                        <div class="reportsell_10_all_shop">
+                                                            <i class="fas fa-arrow-left" ></i>
+                                                        </div>
+                                                </div>
+                                            </div>
+                                    </div>
+                                </div>    
+                        </div>
+                        <div class="reportsell_11_all_shop">
+                            <div class="reportsell_12_all_shop">
+                                <div onclick="showalert_reportfiter()"   class="reportsell_13_all_shop">
+                                    <i class="fas fa-arrow-left" ></i>
+                                    <p class="BB h5_half font_Prompt"> สำนักงานใหญ่, ตุลาคม 2565</p>
+                                    <div class="reportsell_14_all_shop">
+                                        <i class="fas fa-arrow-left" ></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="reportsell_15_all_shop reportsell_26_borderbott_shop" >
+                            <p id="Nuall_minitap_sectap1" onclick="manuall_minitap_all(1)" class=" h4 font_Prompt textlinener_report">ทั้งหมด</p>
+                            <p id="Nuall_minitap_sectap2" onclick="manuall_minitap_all(2)" class=" h4 font_Prompt">รายการสำเร็จ</p>
+                            <p id="Nuall_minitap_sectap3" onclick="manuall_minitap_all(3)" class=" h4 font_Prompt">รายการยกเลิก</p>
+                            </div>
+                        </div>
+                              
+                            <div class="reportsell_16_all_shop" >
+                                  <!-- details ทั้งหมด -->
+                                    <div id="Nuall_all_minitap" class="reportsell_17_all_shop">
+                                            <div class="reportsell_18_all_shop">
+                                              <!-- 1 สำเร็จ-->
+                                              <div class="reportsell_25_shop reportsell_26_borderbott_shop">
+                                                <div class="reportsell_26_shop">
+                                                        <div class="SUCCESS_GREEN BB h5_half font_Prompt reportsell_27_shop">รับชำระ</div>
+                                                        <div class="reportsell_31_shop">
+                                                                <div class="SUCCESS_GREEN BB h5_half font_Prompt reportsell_28_green_shop"> สำเร็จ</div>
+                                                        </div>
+                                                </div>
+                                                <div class="reportsell_29_shop">
+                                                        <p class="h5 font_Prompt">MAX CARD NO.1362663272</p>
+                                                        <p class="h5 font_Prompt">Tel.094-0000-000</p>
+                                                </div>
+                                                <div class="reportsell_30_shop">
+                                                    <span class="h5 font_Prompt BB"> <i class="fas fa-arrow-left" ></i>
+                                                        11 ตุลลาคม 2565 เวลา 20.25 น.</span>
+                                                    <p class="h4 BB  font_Prompt">150.00</p>
+                                                </div>
+                                            </div>
+                                            <!-- 2 ยกเลิก-->
+                                            <div class="reportsell_25_shop reportsell_26_borderbott_shop">
+                                                <div class="reportsell_26_shop ">
+                                                        <div class="ERROR_RED BB h5_half font_Prompt reportsell_27_shop" >รับชำระ</div>
+                                                        <div class="reportsell_31_shop">
+                                                                <div class="ERROR_RED BB h5_half font_Prompt reportsell_28_red_shop" > รายการยกเลิก</div>
+                                                        </div>
+                                                </div>
+                                                <div class="reportsell_29_shop">
+                                                        <p class="h5 font_Prompt">MAX CARD NO.1362663272</p>
+                                                        <p class="h5 font_Prompt">Tel.094-0000-000</p>
+                                                </div>
+                                                <div class="reportsell_30_shop">
+                                                    <span class="h5 font_Prompt BB"> <i class="fas fa-arrow-left" ></i>
+                                                        11 ตุลลาคม 2565 เวลา 20.25 น.</span>
+                                                    <p class="h4 BB ERROR_RED font_Prompt">510.00</p>
+                                                </div>
+                                            </div>
+
+                                                
+                                 
+                                         </div>   
+                                     </div>
+                                    <div id="Nuall_success_minitap" style="width:100%; height: 27vh; display: none; ">
+                                        <div style="width:100%; background-color: white;">
+                                            <!-- 1 สำเร็จ-->
+                                            <div class="reportsell_25_shop reportsell_26_borderbott_shop">
+                                                <div class="reportsell_26_shop">
+                                                        <div class="SUCCESS_GREEN BB h5_half font_Prompt reportsell_27_shop">รับชำระ</div>
+                                                        <div class="reportsell_31_shop">
+                                                                <div class="SUCCESS_GREEN BB h5_half font_Prompt reportsell_28_green_shop"> สำเร็จ</div>
+                                                        </div>
+                                                </div>
+                                                <div class="reportsell_29_shop">
+                                                        <p class="h5 font_Prompt">MAX CARD NO.1362663272</p>
+                                                        <p class="h5 font_Prompt">Tel.094-0000-000</p>
+                                                </div>
+                                                <div class="reportsell_30_shop">
+                                                    <span class="h5 font_Prompt BB"> <i class="fas fa-arrow-left" ></i>
+                                                        11 ตุลลาคม 2565 เวลา 20.25 น.</span>
+                                                    <p class="h4 BB  font_Prompt">250.00</p>
+                                                </div>
+                                            </div>
+                                            <!-- 1 สำเร็จ-->
+                                            <div class="reportsell_25_shop reportsell_26_borderbott_shop">
+                                                <div class="reportsell_26_shop">
+                                                        <div class="SUCCESS_GREEN BB h5_half font_Prompt reportsell_27_shop">รับชำระ</div>
+                                                        <div class="reportsell_31_shop">
+                                                                <div class="SUCCESS_GREEN BB h5_half font_Prompt reportsell_28_green_shop"> สำเร็จ</div>
+                                                        </div>
+                                                </div>
+                                                <div class="reportsell_29_shop">
+                                                        <p class="h5 font_Prompt">MAX CARD NO.1362663272</p>
+                                                        <p class="h5 font_Prompt">Tel.094-0000-000</p>
+                                                </div>
+                                                <div class="reportsell_30_shop">
+                                                    <span class="h5 font_Prompt BB"> <i class="fas fa-arrow-left" ></i>
+                                                        11 ตุลลาคม 2565 เวลา 20.25 น.</span>
+                                                    <p class="h4 BB  font_Prompt">350.00</p>
+                                                </div>
+                                            </div>
+                                          
+                                         </div>  
+                                    </div>
+
+                                    <div id="Nuall_cancel_minitap" style="width:100%; height: 27vh; display: none; ">
+                                        <!-- 2 ยกเลิก-->
+                                        <div class="reportsell_25_shop reportsell_26_borderbott_shop">
+                                            <div class="reportsell_26_shop ">
+                                                    <div class="ERROR_RED BB h5_half font_Prompt reportsell_27_shop" >รับชำระ</div>
+                                                    <div class="reportsell_31_shop">
+                                                            <div class="ERROR_RED BB h5_half font_Prompt reportsell_28_red_shop" > รายการยกเลิก</div>
+                                                    </div>
+                                            </div>
+                                            <div class="reportsell_29_shop">
+                                                    <p class="h5 font_Prompt">MAX CARD NO.1362663272</p>
+                                                    <p class="h5 font_Prompt">Tel.094-0000-000</p>
+                                            </div>
+                                            <div class="reportsell_30_shop">
+                                                <span class="h5 font_Prompt BB"> <i class="fas fa-arrow-left" ></i>
+                                                    11 ตุลลาคม 2565 เวลา 20.25 น.</span>
+                                                <p class="h4 BB ERROR_RED font_Prompt">510.00</p>
+                                            </div>
+                                        </div>
+                                       <!-- 2 ยกเลิก-->
+                                       <div class="reportsell_25_shop reportsell_26_borderbott_shop">
+                                        <div class="reportsell_26_shop ">
+                                                <div class="ERROR_RED BB h5_half font_Prompt reportsell_27_shop" >รับชำระ</div>
+                                                <div class="reportsell_31_shop">
+                                                        <div class="ERROR_RED BB h5_half font_Prompt reportsell_28_red_shop" > รายการยกเลิก</div>
+                                                </div>
+                                        </div>
+                                        <div class="reportsell_29_shop">
+                                                <p class="h5 font_Prompt">MAX CARD NO.1362663272</p>
+                                                <p class="h5 font_Prompt">Tel.094-0000-000</p>
+                                        </div>
+                                        <div class="reportsell_30_shop">
+                                            <span class="h5 font_Prompt BB"> <i class="fas fa-arrow-left" ></i>
+                                                11 ตุลลาคม 2565 เวลา 20.25 น.</span>
+                                            <p class="h4 BB ERROR_RED font_Prompt">10.00</p>
+                                        </div>
+                                    </div>
+                                    </div>
+                                    <!-- details ทั้งหมด -->
+                            </div>                       
+                </div>
+               
+            </div> 
+
+
+        <!-- modal 1 excel -->
+        <div id="filterexccel_alert" class="bg_reportsell_filter1   overlay05    overlay-slidedown05 "   >
+            <div class="forexit">
+                <div id="back_1"  onclick="close_excell()"    class="testalertonclick_button">
+                    <i class="fa-solid fa-xmark"></i>
+                </div> 
+            </div>
+            <div class="reportsell_swalex01_shop">
+                    <!-- div 1 -->
+                    <div class="reportsell_swalex02_shop" >
+                        <div class="reportsell_swalex03_shop" > 
+                                <div class="h2 font_Prompt reportsell_swalex04_shop" >
+                                    <i class="fal fa-file-excel " class="reportsell_swalex05_shop"  ></i> 
+                                    <p class="BB h2 font_Prompt prompt600"> Export Excel</p> 
+                                </div>
+                                <div class="reportsell_swalex06_shop" >
+                                    <p class="font_Prompt h4_half">เลือกสาขาร้านค้า</p>
+                                    <div class="select">
+                                        <select>
+                                          <option value="1">Pure CSS Select</option>
+                                          <option value="2">No JS</option>
+                                          <option value="3">Nice!</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                
+                        </div>
+                         <div class="reportsell_swalex07_shop">
+                                        <div class="reportsell_swalex08_shop"> 
+                                            <p class="h4  font_Prompt"> เลือกเดือน</p>
+                                            <p id="year1" class="h4 BB font_Prompt"> 2565</p>
+                                                <div class="reportsell_swalex09_shop"> 
+                                                    <div class="reportsell_swalex10_shop">
+                                                        <label class="container0">
+                                                            <p class="h4_half font_Prompt BB"> ม.ค</p>
+                                                            <input type="checkbox" checked="checked" >
+                                                            <span class="checkmark"></span>
+                                                        </label>
+                                                    </div>
+                                                    <div class="reportsell_swalex10_shop">
+                                                        <label class="container0">
+                                                            <p class="h4_half font_Prompt BB"> ก.w</p>
+                                                            <input type="checkbox" checked="checked" >
+                                                            <span class="checkmark"></span>
+                                                        </label>
+                                                    </div>
+                                                    <div class="reportsell_swalex10_shop">
+                                                        <label class="container0">
+                                                            <p class="h4_half font_Prompt BB"> มี.ค</p>
+                                                            <input type="checkbox" checked="checked" >
+                                                            <span class="checkmark"></span>
+                                                        </label>
+                                                    </div>
+                                                    <div class="reportsell_swalex10_shop">
+                                                        <label class="container0">
+                                                            <p class="h4_half font_Prompt BB"> ม.ย</p>
+                                                            <input type="checkbox"  >
+                                                            <span class="checkmark"></span>
+                                                        </label>
+                                                    </div>
+                                                    
+                                                </div>
+                                            </div>
+                                            <div class="reportsell_swalex08_shop"> 
+                                                <p id="year2" class="h4 BB font_Prompt"> 2565</p>
+                                                <div class="reportsell_swalex11_shop" > 
+                                                    <div class="reportsell_swalex10_shop">
+                                                        <label class="container0">
+                                                            <p class="h4_half font_Prompt BB"> ม.ค</p>
+                                                            <input type="checkbox" checked="checked">
+                                                            <span class="checkmark"></span>
+                                                        </label>
+                                                    </div>
+                                                    <div class="reportsell_swalex10_shop">
+                                                        <label class="container0">
+                                                            <p class="h4_half font_Prompt BB">ก.พ </p>
+                                                            <input type="checkbox" checked="checked">
+                                                            <span class="checkmark"></span>
+                                                        </label>
+                                                    </div>
+                                                    <div class="reportsell_swalex10_shop">
+                                                        <label class="container0">
+                                                            <p class="h4_half font_Prompt BB"> มี.ค </p>
+                                                            <input type="checkbox" >
+                                                            <span class="checkmark"></span>
+                                                        </label>
+                                                    </div>
+                                                    <div class="reportsell_swalex10_shop">
+                                                        <label class="container0">
+                                                            <p class="h4_half font_Prompt BB"> ม.ย </p>
+                                                            <input type="checkbox" >
+                                                            <span class="checkmark"></span>
+                                                        </label>
+                                                    </div>
+                                                    <div class="reportsell_swalex10_shop">
+                                                        <label class="container0">
+                                                            <p class="h4_half font_Prompt BB"> ม.ค</p>
+                                                            <input type="checkbox" >
+                                                            <span class="checkmark"></span>
+                                                        </label>
+                                                    </div>
+                                                    <div class="reportsell_swalex10_shop">
+                                                        <label class="container0">
+                                                            <p class="h4_half font_Prompt BB">ก.พ </p>
+                                                            <input type="checkbox" >
+                                                            <span class="checkmark"></span>
+                                                        </label>
+                                                    </div>
+                                                    <div class="reportsell_swalex10_shop">
+                                                        <label class="container0">
+                                                            <p class="h4_half font_Prompt BB"> มี.ค </p>
+                                                            <input type="checkbox" >
+                                                            <span class="checkmark"></span>
+                                                        </label>
+                                                    </div>
+                                                    <div class="reportsell_swalex10_shop">
+                                                        <label class="container0">
+                                                            <p class="h4_half font_Prompt BB"> ม.ย </p>
+                                                            <input type="checkbox" >
+                                                            <span class="checkmark"></span>
+                                                        </label>
+                                                    </div>
+                                                  
+                                                </div>
+                                               
+                                        </div>
+                                    </div>
+                                
+                                </div>
+                   </div>
+                    <div class="reportsell_swalex12_shop">
+                        <div class="reportsell_swalex13_shop">
+                            <p class="font_Prompt h4_half">ส่งไปยัง e-mail</p>
+                            <div style="margin-bottom: 4vw;">
+                                <div class="box_detailinfo_sell">
+                                    <input class="boxinput_detailinfo_sell" name="num" >
+                                </div>
+                            </div>
+                        </div>
+                        <div class="salmonlong_reportsellbutton h2 ">
+                            <p class=" font_Prompt h4_half primary-text-white ">Export Excel</p>
+                        </div>
+                    </div>
+        </div>
+
+
+         <!-- modal 2 filter -->
+         <div id="filterdate_alert" class="bg_reportsell_filter1   overlay06    overlay-slidedown06  relative_po"    >
+            <div  style=" justify-content: space-between; display: flex;">
+               
+                <div class="h2 font_Prompt reportsell_swalex14_shop">
+                    <i class="fal fa-file-excel "  class="reportsell_swalex15_shop" ></i> 
+                    <p class="BB h2 font_Prompt prompt600"> Export Excel</p> 
+                </div>
+                <div id="back_2"  onclick="close_excell()"    class="testalertonclick_button">
+                    <i class="fa-solid fa-xmark"></i>
+                </div> 
+            </div>
+            <div class="reportsell_swalex16_shop">
+                    <div  class="reportsell_swalex17_shop">
+                        <div class="reportsell_swalex18_shop">
+                            <label class="h3 font_Prompt " >เลือกสาขาร้านค้า</label> 
+                                    <div class="box_detailinfo_forresell">
+                                        <select class="dropdown_border_box_forresell">
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                        </select>
+                                    </div>
+                        </div>
+                        <div class="reportsell_swalex18_shop">
+                            <label class="h3 font_Prompt " >เลือกเดือน</label> 
+                                    <div class="box_detailinfo_forresell ">
+                                        <select class="dropdown_border_box_forresell">
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                        </select>
+                                    </div>
+                        </div>
+                        <div class="reportsell_swalex18_shop">
+                            <label class="h3 font_Prompt " >เลือกกะเวลา</label> 
+                                    <div class="box_detailinfo_forresell ">
+                                        <select class="dropdown_border_box_forresell">
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                        </select>
+                                    </div>
+                        </div> 
+                   </div>
+             </div>
+             <div class="salmonlong_reportsellbutton h2 reportsell_swalex19_shop">
+                <p class=" font_Prompt h4_half primary-text-white ">นำไปใช้</p>
+            </div>
+         </div>  
+        </div> 
+    </body>
+</html>
+
+      
+
+<script>
+
+    function showalert_reportfiter(){
+      $('#filterdate_alert').addClass('open')
+      $('#bg_shadow').css("display",'block')
+      $('#filterdate_alert').addClass('webkit-scrollbar')
+     }
+
+    function showalert_reportexcell(){
+      
+        $('#filterexccel_alert').addClass('open')
+        $('#bg_shadow').css("display",'block')
+        $('#filterexccel_alert').addClass('webkit-scrollbar')
+        
+       
+    }
+
+    function close_excell(){
+        $('.overlay05').removeClass('open')
+        $('.overlay06').removeClass('open')
+        $('#bg_shadow').css("display",'none')
+    }
+
+    function all_minitap_shop(id){
+        $("#all_detail_minitap").css("display",'none')
+        $("#reportdone_minitap").css("display",'none')
+        $("#reportcancel_minitap").css("display",'none')
+        $(".box_shadow").css("display",'none')
+
+        if(id == 1){
+        $("#reportdone_sectap1").addClass('textlinener_report')
+        $("#reportdone_sectap2").removeClass('textlinener_report')
+        $("#reportcancel_sectap3").removeClass('textlinener_report')
+      
+
+        $("#all_detail_minitap").css("display",'block')
+        $("#reportdone_detail_minitap").css("display",'none')
+        $("#reportcancel_detail_minitap").css("display",'none')
+        
+
+
+        }
+
+        if(id == 2){
+        $("#reportdone_sectap1").removeClass('textlinener_report')
+        $("#reportdone_sectap2").addClass('textlinener_report')
+        $("#reportcancel_sectap3").removeClass('textlinener_report')
+      
+        $("#all_detail_minitap").css("display",'none')
+        $("#reportdone_detail_minitap").css("display",'block')
+        $("#reportcancel_detail_minitap").css("display",'none')
+
+        }
+
+        if(id == 3){
+        $("#reportdone_sectap1").removeClass('textlinener_report')
+        $("#reportdone_sectap2").removeClass('textlinener_report')
+        $("#reportcancel_sectap3").addClass('textlinener_report')
+      
+        $("#all_detail_minitap").css("display",'none')
+        $("#reportdone_detail_minitap").css("display",'none')
+        $("#reportcancel_detail_minitap").css("display",'block')
+        }
+    
+    }
+
+
+    function menutapreportsell(id) {
+    // $("#income_tap-1").removeClass('active')
+    // $("#withdraw_tap-2").removeClass('active')
+    // $("#all_tap-3").removeClass('active')
+
+
+    $("#income_detail").css("display",'none')
+    $("#withdraw_detail").css("display",'none')
+    $("#all_detail").css("display",'none')
+  
+
+    if(id == 1){
+        $("#income_tap-1").addClass('active')
+        $("#withdraw_tap-2").removeClass('active')
+        $("#all_tap-3").removeClass('active')
+      
+
+        $("#income_detail").css("display",'block')
+        
+    }
+    if(id == 2){
+        $("#income_tap-1").removeClass('active')
+        $("#withdraw_tap-2").addClass('active')
+        $("#all_tap-3").removeClass('active')
+      
+
+        $("#withdraw_detail").css("display",'block')
+    }
+    if(id == 3){
+        $("#income_tap-1").removeClass('active')
+        $("#withdraw_tap-2").removeClass('active')
+        $("#all_tap-3").addClass('active')
+      
+
+        $("#all_detail").css("display",'block')
+    }
+
+
+}
+
+
+function all_minitap_withdraw(id){
+        $("#withdraw_all_minitap").css("display",'none')
+        $("#withdraw_success_minitap").css("display",'none')
+        $("#withdraw_cancel_minitap").css("display",'none')
+        $(".box_shadow").css("display",'none')
+
+        if(id == 1){
+        $("#reportminitap_sectap1").addClass('textlinener_report')
+        $("#reportminitap_sectap2").removeClass('textlinener_report')
+        $("#reportminitap_sectap3").removeClass('textlinener_report')
+      
+
+        $("#withdraw_all_minitap").css("display",'block')
+        $("#withdraw_success_minitap").css("display",'none')
+        $("#withdraw_cancel_minitap").css("display",'none')
+        
+        }
+
+        if(id == 2){
+        $("#reportminitap_sectap1").removeClass('textlinener_report')
+        $("#reportminitap_sectap2").addClass('textlinener_report')
+        $("#reportminitap_sectap3").removeClass('textlinener_report')
+      
+        $("#withdraw_all_minitap").css("display",'none')
+        $("#withdraw_success_minitap").css("display",'block')
+        $("#withdraw_cancel_minitap").css("display",'none')
+
+        }
+
+        if(id == 3){
+        $("#reportminitap_sectap1").removeClass('textlinener_report')
+        $("#reportminitap_sectap2").removeClass('textlinener_report')
+        $("#reportminitap_sectap3").addClass('textlinener_report')
+      
+        $("#withdraw_all_minitap").css("display",'none')
+        $("#withdraw_success_minitap").css("display",'none')
+        $("#withdraw_cancel_minitap").css("display",'block')
+        }
+    
+    }
+
+
+function manuall_minitap_all(id){
+    $("#Nuall_all_minitap").css("display",'none')
+    $("#Nuall_success_minitap").css("display",'none')
+    $("#Nuall_cancel_minitap").css("display",'none')
+    $(".box_shadow").css("display",'none')
+
+    if(id == 1){
+    $("#Nuall_minitap_sectap1").addClass('textlinener_report')
+    $("#Nuall_minitap_sectap2").removeClass('textlinener_report')
+    $("#Nuall_minitap_sectap3").removeClass('textlinener_report')
+    
+
+    $("#Nuall_all_minitap").css("display",'block')
+    $("#Nuall_success_minitap").css("display",'none')
+    $("#Nuall_cancel_minitap").css("display",'none')
+    
+    }
+
+    if(id == 2){
+    $("#Nuall_minitap_sectap1").removeClass('textlinener_report')
+    $("#Nuall_minitap_sectap2").addClass('textlinener_report')
+    $("#Nuall_minitap_sectap3").removeClass('textlinener_report')
+    
+    $("#Nuall_all_minitap").css("display",'none')
+    $("#Nuall_success_minitap").css("display",'block')
+    $("#Nuall_cancel_minitap").css("display",'none')
+
+    }
+
+    if(id == 3){
+    $("#Nuall_minitap_sectap1").removeClass('textlinener_report')
+    $("#Nuall_minitap_sectap2").removeClass('textlinener_report')
+    $("#Nuall_minitap_sectap3").addClass('textlinener_report')
+    
+    $("#Nuall_all_minitap").css("display",'none')
+    $("#Nuall_success_minitap").css("display",'none')
+    $("#Nuall_cancel_minitap").css("display",'block')
+    }
+
+}
+
+
+
+</script>

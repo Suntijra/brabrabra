@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width"/>
+        <title>otp</title>
+        <!-- font -->
+        <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Prompt&display=swap" rel="stylesheet">
+
+        <!-- css -->
+        <link rel="stylesheet" type="text/css" href="./globle_newmerchant.css"/>
+        
+        <!-- script --> 
+         
+         <script src=
+		"https://code.jquery.com/jquery-3.6.0.min.js">
+	    </script>
+        <script type="text/javascript" src="tony.js"></script>
+        <link href="http://fonts.cdnfonts.com/css/gilroy-bold" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+
+
+    </head>
+    
+  
+    <body>
+        <!-- TONY 22 june 2022 16:33 started  -->
+        <div class="otpmain container BG4">
+
+            <div  class="otp-head ">
+
+                <div class="otp-head-button head_button" >
+                    <div class="back_button">
+                        <i class="fas fa-arrow-left" ></i>
+                    </div>
+                   
+                </div>
+                
+                <p class="h1 font_Prompt primary-text-white BB otp-headtext " >ยืนยันด้วย OTP</p>
+                
+                <p class="h4 font_Prompt primary-text-white otp-headtext-sm" >กรอก OTP โค้ดที่ถูกส่งไปยัง</p>
+                
+                <p class="h4 font_Prompt primary-text-white BB otp-headtext-sm" >081-XXX-56XX</p>
+            
+            </div>
+            
+            <div class="otp-body">
+                <div class="otp-body-top">
+                    
+                    <span class="font_Prompt h4_half primary-text-white BB otp-ref-text">REF: OMRS</span>
+
+                    <div class="otp-pin-display-container">
+                        <div class="otp-pin-display"id = "pin-display1"></div>
+                        <div class="otp-pin-display"id = "pin-display2"></div>
+                        <div class="otp-pin-display"id = "pin-display3"></div>
+                        <div class="otp-pin-display"id = "pin-display4"></div>
+                        <div class="otp-pin-display"id = "pin-display5"></div>
+                        <div class="otp-pin-display"id = "pin-display6"></div>
+
+
+                    </div>
+
+                    <div class="otp-resend">
+                        
+                        <img src="imgs/otp-resend1.png" alt="" class="otp-resend-img">
+
+                        <span class="font_Prompt h4_half primary-text-white  otp-resend-text  ">  ส่ง OTP อีกครั้ง</span>
+
+                        <span class="font_Prompt h4_half primary-text-white  otp-resend-text-time "id = "otp-time-countdown">(01:59)</span>
+                    </div>
+
+
+
+                </div>
+    
+                <div class="otp-body-bottom">
+                    <div class="otp-pin-row">
+                        <div class="otp-pin-col-container" onclick="clickAll(this)" id="1">
+                            <div class="otp-pin-col">
+                                1
+                            </div>
+                        </div>
+                        <div class="otp-pin-col-container" onclick="clickAll(this)" id="2">
+                            <div class="otp-pin-col">
+                                2
+                            </div>
+                        </div>
+                        <div class="otp-pin-col-container" onclick="clickAll(this)" id="3">
+                            <div class="otp-pin-col">
+                                3
+                            </div>
+                        </div>
+                        
+
+                    </div>
+                    <div class="otp-pin-row">
+                        <div class="otp-pin-col-container" onclick="clickAll(this)" id="4">
+                            <div class="otp-pin-col" >
+                                4
+                            </div>
+                        </div>
+
+                        <div class="otp-pin-col-container" onclick="clickAll(this)" id="5">
+                            <div class="otp-pin-col" >
+                                5
+                            </div>
+                        </div>
+
+                        <div class="otp-pin-col-container" onclick="clickAll(this)" id="6">
+                            <div class="otp-pin-col">
+                                6
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="otp-pin-row">
+                       
+                        <div class="otp-pin-col-container" onclick="clickAll(this)" id="7">
+                            <div class="otp-pin-col" >
+                                7
+                            </div>
+                        </div>
+
+                        <div class="otp-pin-col-container" onclick="clickAll(this)" id="8">
+                            <div class="otp-pin-col">
+                                8
+                            </div>
+                        </div>
+
+                        <div class="otp-pin-col-container" onclick="clickAll(this)" id="9">
+                            <div class="otp-pin-col" >
+                                9
+                            </div>
+                        </div>
+                    </div>
+                    <div class="otp-pin-row">
+                        
+                        <div class="otp-pin-col-container-empty">
+                            <div class="otp-pin-col-empty">
+                                
+                            </div>
+                        </div>
+
+                        <div class="otp-pin-col-container" onclick="clickAll(this)" id="0">
+                            <div class="otp-pin-col">
+                                0
+                            </div>
+                        </div>
+
+                        <div class="otp-pin-col-container-empty">
+                            <div class="otp-pin-col-empty" onclick="clickAll(this)" id="4275">
+                                <img src="imgs/pin-delete.png" alt="" class="pin-delete-img ">
+                        
+                            </div>
+                        </div>
+
+                       
+                    </div>
+                    
+                </div>
+    
+            </div>
+
+
+
+
+
+
+
+
+        </div> 
+    </body>
+</html>
+
