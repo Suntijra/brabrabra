@@ -2,6 +2,7 @@ const cors = require('cors');
 const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
+const { add } = require('nodemon/lib/rules');
 
 app.use(bodyParser.json());
 app.use(cors());
@@ -25,6 +26,32 @@ app.post('/api/Shopsakainfo', (req, resp) => {
     }
 
 })
+
+var adddata =[]
+app.post('/api/addsaka', (req, resp) => {
+    let user = req.body.user
+    let pwd = req.body.password
+    try {
+        adddata.push({
+        'usernam': user,
+        'password': pwd
+        })
+        return resp.status(200).json(
+            {
+                data : adddata,
+                status: "ok"
+            }
+        )
+    } catch (error) {
+        return resp.status(500).json(
+            {
+                status: "fail",
+            }
+        )
+    }
+
+})
+
 
 
 
@@ -61,3 +88,5 @@ var data = [[{
     "typeShope": "{\"storeFront\":\"yes\",\"typeShope\":\"ร้านขายเครื่องสำอาง\"}"
 }
 ]]
+
+

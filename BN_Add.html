@@ -277,8 +277,39 @@
 
 
         </div>
+
+        
         
            
     </body>
+
+        <script>
+            $.ajax({
+        method: 'post',
+        url: 'http://192.168.1.18:3000/api/Shopsakainfo',
+        success: (response) => {
+
+            data = response.data
+            console.log(data)
+            if (response.status == 'ok') {
+                console.log(data[0].length)
+                var htmlInner = '';
+                for (let i = 0; i < data[0].length; i++) {
+                    htmlInner += 
+                    
+                }
+                console.log(htmlInner)
+                document.getElementById("frontdata").innerHTML = htmlInner
+                // document.getElementById("demo").innerHTML = html;
+            } else {
+                console.log('ลง else')
+            }
+        },
+        error: function (err) {
+            console.log(err)
+        }
+    })
+        </script>
+        
 </html>
 
