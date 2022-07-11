@@ -31,10 +31,32 @@ var adddata =[]
 app.post('/api/addsaka', (req, resp) => {
     let user = req.body.user
     let pwd = req.body.password
+    let bnname = req.body.bnname
+    let detail = req.body.detail
+    let tel = req.body.tel
+    let bndetail = req.body.bndetail
+    let contact = req.body.contact
+    let location = req.body.location
+    let shopid = req.body.shopid
+    let province = req.body.province
+    let district = req.body.district
+    let tumbon = req.body.tumbon
+    let zipcode = req.body.zipcode
     try {
         adddata.push({
-        'usernam': user,
-        'password': pwd
+        'ชื่อผู้ใช้งาน': user,
+        'รหัสผ่าน': pwd,
+        'ชื่อสาขา': bnname,
+        'รายละเอียด': detail,
+        'เบอร์โทรร้านค้า': tel,
+        'รายละเอียดของสาขา': bndetail,
+        'ผู้ที่สามารถติดต่อได้': contact,
+        'ที่ตั้งร้านค้า': location,
+        'เลขที่ร้านค้า': shopid,
+        'จังหวัด': province,
+        'อำเภอ': district,
+        'ตำบล': tumbon,
+        'รหัสไปรษณีย์': zipcode,
         })
         return resp.status(200).json(
             {
