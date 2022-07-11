@@ -231,3 +231,45 @@ app.post('/api/merchant/report/withdraw', (req,res) =>{
         }
     }
 })
+app.post('/api/merchant/report/income', (req, res) => {
+    var token = req.body.token
+    var data = [{
+            Respmessage: 'Success',
+            maxcardno: '162729252926',
+            tel: '0987654321',
+            date: '2022-07-01 00:00:00',
+            status: 'สำเร็จ',
+            price: 50.00
+        },{
+            Respmessage: 'Success',
+            maxcardno: '162729252926',
+            tel: '0987654321',
+            date: '2022-07-01 00:00:00',
+            status: 'สำเร็จ',
+            price: 50.00
+        },{
+            Respmessage: 'Success',
+            maxcardno: '162729252926',
+            tel: '0987654321',
+            date: '2022-07-01 00:00:00',
+            status: 'รายการยกเลิก',
+            price: 50.00
+        },{
+            Respmessage: 'Success',
+            maxcardno: '17631773897',
+            tel: '0123456789',
+            date: '2022-07-01 00:00:00',
+            status: 'รายการยกเลิก',
+            price: 100.00
+        }]
+    if(token == '1234'){
+        try{
+            return res.status(200).json(data)      
+        }catch(er){
+            console.log("error ===>",er)
+            return res.status(500).json({
+                error: err.message
+            })
+        }
+    }
+})
