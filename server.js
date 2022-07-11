@@ -232,7 +232,7 @@ app.post('/api/merchant/report/withdraw', (req, res) => {
 })
 app.post('/api/merchant/report/income', (req, res) => {
     var token = req.body.token
-    var data = [{
+    let data = [{
         Respmessage: 'Success',
         maxcardno: '162729252926',
         tel: '0987654321',
