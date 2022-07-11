@@ -177,8 +177,8 @@
                 <div class="BNInfoTop">
                     <img src="imgs/shop-icon.png" alt="shop-icon" class="BNInfoShopIcon">
                     <div class="BNInfoTopTextBox">
-                        <div class="BNInfoText1 h1 font_Prompt BB primary-text-black">เลิฟมีเทนเดอร์</div>
-                        <div class="BNInfoText2 h3 font_Prompt BB primary-text-bitterweet">สำนักงานใหญ่</div>
+                        <div class="BNInfoText1 h1 font_Prompt BB primary-text-black">${data[0][i].shopName}</div>
+                        <div class="BNInfoText2 h3 font_Prompt BB primary-text-bitterweet">${data[0][i].branch}</div>
                     </div>
                 </div>
                 <div class="BNInfoBot">
@@ -189,8 +189,6 @@
                         </div>
                         <i class="fa-solid fa-chevron-right"></i>
                     </div>
-
-
                     <div class="onoffswitch">
                         <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch"
                             tabindex="0" checked>
@@ -203,7 +201,6 @@
                 </div>
             </div>`
                 }
-                console.log(htmlInner)
                 document.getElementById("frontdata").innerHTML = htmlInner
                 // document.getElementById("demo").innerHTML = html;
             } else {

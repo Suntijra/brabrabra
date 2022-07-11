@@ -70,7 +70,7 @@ var data = [[{
 {
     "customerID": "00388",
     "shopName": "เลิฟมีเทนเดอร์",
-    "branch": "สำนักงานใหญ่ 2",
+    "branch": "สำนักงานใหญ่ 20",
     "username": "admin23",
     "status": "open",
     "branch_detail": "การทำน้อยกว่าที่ทำย้อมดีกว่าไม่ทำอะไรเลย",
@@ -80,7 +80,17 @@ var data = [[{
 {
     "customerID": "00388",
     "shopName": "เลิฟมีเทนเดอร์",
-    "branch": "สำนักงานใหญ่ 3",
+    "branch": "สำนักงานใหญ่ 112",
+    "username": "admin3",
+    "status": "open",
+    "branch_detail": "การทำน้อยกว่าที่ทำย้อมดีกว่าไม่ทำอะไรเลย",
+    "tel": "09x-xxxx-xxx",
+    "typeShope": "{\"storeFront\":\"yes\",\"typeShope\":\"ร้านขายเครื่องสำอาง\"}"
+},
+{
+    "customerID": "00388",
+    "shopName": "เลิฟมีเทนเดอร์",
+    "branch": "สำนักงานใหญ่ 112",
     "username": "admin3",
     "status": "open",
     "branch_detail": "การทำน้อยกว่าที่ทำย้อมดีกว่าไม่ทำอะไรเลย",
