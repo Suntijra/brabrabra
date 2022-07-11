@@ -8,7 +8,6 @@ app.use(bodyParser.json());
 app.use(cors());
 const port = 3000
 app.listen(port, () => console.log(`Example app listening on port ${port}!`))
-
 app.post('/api/Shopsakainfo', (req, resp) => {
     try {
         return resp.status(200).json(
@@ -78,6 +77,12 @@ app.post('/api/updatainfo', (req, resp) => {
     try {
         let obj = req.body.obj
         console.log(obj)
+        for(let i = 0; i < data.length; i++){
+            if(data[i].customerID == obj.customerID){
+               data[i].customerID = obj.customerID
+                data[i].customerName = obj.customerName
+            }
+        }
         return resp.status(200).json({
             status: "ok",
         })
