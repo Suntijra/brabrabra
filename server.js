@@ -77,9 +77,9 @@ app.post('/api/updatainfo', (req, resp) => {
     try {
         let obj = req.body.obj
         console.log(obj)
-        for(let i = 0; i < data.length; i++){
-            if(data[i].customerID == obj.customerID){
-               data[i].customerID = obj.customerID
+        for (let i = 0; i < data.length; i++) {
+            if (data[i].customerID == obj.customerID) {
+                data[i].customerID = obj.customerID
                 data[i].customerName = obj.customerName
             }
         }
