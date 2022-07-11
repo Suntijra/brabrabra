@@ -155,7 +155,7 @@ var data = [[{
 
 app.post('/api/merchant/report/withdraw', (req, res) => {
     var token1 = req.body.token
-    data = [{
+    let data = [{
         Respmessage: 'Success',
         maxcardno: 'WithDraw',
         tel: '0123456789',
