@@ -58,6 +58,8 @@ app.post('/api/addsaka', (req, resp) => {
         'ตำบล': tumbon,
         'รหัสไปรษณีย์': zipcode,
         })
+        console.log('-------------add OK---------------')
+        console.log(user)
         return resp.status(200).json(
             {
                 status: "ok"
@@ -77,7 +79,21 @@ app.post('/api/addsaka', (req, resp) => {
 
 
 
-
+// adddata.push({
+//     'ชื่อผู้ใช้งาน': user,
+//     'รหัสผ่าน': pwd,
+//     'ชื่อสาขา': bnname,
+//     'รายละเอียด': detail,
+//     'เบอร์โทรร้านค้า': tel,
+//     'รายละเอียดของสาขา': bndetail,
+//     'ผู้ที่สามารถติดต่อได้': contact,
+//     'ที่ตั้งร้านค้า': location,
+//     'เลขที่ร้านค้า': shopid,
+//     'จังหวัด': province,
+//     'อำเภอ': district,
+//     'ตำบล': tumbon,
+//     'รหัสไปรษณีย์': zipcode,
+//     })
 var data = [[{
     "customerID": "1111",
     "shopName": "เลิฟมีเทนเดอร์",
@@ -102,7 +118,7 @@ var data = [[{
     "customerID": "3333",
     "shopName": "เลิฟมีเทนเดอร์",
     "branch": "สำนักงานใหญ่ 112",
-    "username": "admin3",
+    "username": "admin31111",
     "status": "open",
     "branch_detail": "การทำน้อยกว่าที่ทำย้อมดีกว่าไม่ทำอะไรเลย",
     "tel": "09x-xxxx-xxx",

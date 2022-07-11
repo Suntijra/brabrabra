@@ -1,200 +1,237 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width"/>
-        <title>ข้อมูลสาขา</title>
-        <!-- font -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Prompt&display=swap" rel="stylesheet">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-        <!-- css -->
-        <link rel="stylesheet" type="text/css" href="./globle_newmerchant.css"/>
-        <link rel="stylesheet" type="text/css" href="./slick-1.8.1/slick/slick.css"/>
-        <link rel="stylesheet" type="text/css" href="./slick-1.8.1/slick/slick-theme.css"/>
 
-        <!-- script -->
-        <script type="text/javascript" src="./slick-1.8.1/slick/slick.min.js"></script>
-        <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
-        <link href="http://fonts.cdnfonts.com/css/gilroy-bold" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width" />
+    <title>ข้อมูลสาขา</title>
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <!-- css -->
+    <link rel="stylesheet" type="text/css" href="./globle_newmerchant.css" />
+    <link rel="stylesheet" type="text/css" href="./slick-1.8.1/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="./slick-1.8.1/slick/slick-theme.css" />
 
-    
+    <!-- script -->
+    <script type="text/javascript" src="./slick-1.8.1/slick/slick.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <link href="http://fonts.cdnfonts.com/css/gilroy-bold" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <!-- Axios -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
     <style>
-        .font_Prompt{
+        .font_Prompt {
             font-family: 'Prompt', sans-serif;
         }
     </style>
 
 
-    </head>
-    
-  
-    <body>
-
-            <!-- TONY 30 june 2022 11:37 started  -->
-            <div class="BNAmain BG2 container">
-
-                
-
-                    <div class="backBtnContainer BNATOP1">
-                         <div class="back_button ">
-                             <i class="fas fa-arrow-left" ></i>
-                         </div>
-     
-                         <img class = "BNAHomeBtnImg" src="imgs/home.png" alt="home">
-                    </div>
-                    
-                    <div class="BNATextTopBox BNATOP2">
-                        <div class="BNATopText h1 font_Prompt BB">
-                            ข้อมูลสาขา
-                        </div>
-                        <div class="BNAEditBTN">
-                            <img src="imgs/home.png" alt="" class="editIcon">
-                            <span class="editIconText font_Prompt h4 BB">แก้ไข</span>
-                        </div>
+</head>
 
 
-                    </div>
+<body>
 
-                   
-     
-                     
-     
-                
-                 
-
-                <div class="BNAInfoBody">
-
-                    <div class="BNABox">
-
-                        <label class=" h5 BNAlabel BNA-EN" >CUSTOMER ID</label>
-                        <div class="BNAinputcontain">
-                            <input type="text" class="BNAinputbox" value="#00388" disabled>   
-                                            
-                        </div>
-                                
-                        <label class="font_Prompt h5 BNAlabel">ชื่อผู้ใช้งาน</label>
-                        <div class="BNAinputcontain">
-
-                            <input type="text" class="BNAinputbox" value="เลิฟมีเทนเดอร์" disabled>    
-                                            
-                        </div>
-
-                        
-
-                        
-                    </div>
+    <!-- TONY 30 june 2022 11:37 started  -->
+    <div class="BNAmain BG2 container">
 
 
 
-                    <div class="BNABox">
-                                
-                        <label class="font_Prompt h5 BNAlabel">ชื่อสาขา</label>
-                        <div class="BNAinputcontain">
-                            
-                            <input type="text" class="BNAinputbox" value="บางนา" disabled>    
-                                            
-                        </div>
+        <div class="backBtnContainer BNATOP1">
+            <div class="back_button" >
+                <i class="fas fa-arrow-left"></i>
+            </div>
 
-                        <label class="font_Prompt h5 BNAlabel">รายละเอียด</label>
-                        <div class="BNAinputcontainBig">
-                            
-                            <textarea  class="BNAinputbox"  disabled>มีอาหารนานาชาติและเครื่องดื่ม        ไม่จำหน่ายแอลกอฮอล์ </textarea>
-                            
-                                            
-                        </div>
+            <img class="BNAHomeBtnImg" src="imgs/home.png" alt="home">
+        </div>
 
-                        <label class="font_Prompt h5 BNAlabel">เบอร์โทรร้านค้า</label>
-                        <div class="BNAinputcontain">
-                            
-                            <input type="text" class="BNAinputbox"value="0669877478" disabled>    
-                                            
-                        </div>
+        <div class="BNATextTopBox BNATOP2">
+            <div class="BNATopText h1 font_Prompt BB">
+                ข้อมูลสาขา
+            </div>
+            <div class="BNAEditBTN" onclick="editinfo(this)">
+                <img src="imgs/home.png" alt="" class="editIcon">
+                <span class="editIconText font_Prompt h4 BB">แก้ไข</span>
+            </div>
 
-                        
-                        
-                    </div>
 
-                    <div class="BNABox">
-                                
-                        <label class="font_Prompt h5 BNAlabel">ประเภทร้านค้า<span class="primary-text-salmon">*</span></label>
-                        <label class="BNACHKBcontain font_Prompt h5 BNAlabel" for="BNACHKBoxInfo01">
-                            
-                            <input type="checkbox" class="BNACHK__input" id="BNACHKBoxInfo01" disabled>
-                            <div class="chkbox__box"></div>
-                               มีหน้าร้าน
-                            
-                        </label>
-                        <div class="BNAinputcontain">
-                            
-                            <select class="BNAinputbox" disabled>
-
-                                <option value="0">กรุณาเลือกประเภทร้านค้า</option>
-                                <option value="1">กรุณาเลือกประเภทร้านค้า 1</option>
-                                <option value="2">กรุณาเลือกประเภทร้านค้า 2</option>
-                                <option value="3">กรุณาเลือกประเภทร้านค้า 3</option>
-                                <option value="4">กรุณาเลือกประเภทร้านค้า 4</option>
-                                <option value="5">กรุณาเลือกประเภทร้านค้า 5</option>
+        </div>
 
 
 
-                            </select>  
-                                            
-                        </div>
-                        <label class="BNACHKBcontain font_Prompt h5 BNAlabel" for="BNACHKBoxInfo02">
-                            
-                            <input type="checkbox" class="BNACHK__input" id="BNACHKBoxInfo02" disabled>
-                            <div class="chkbox__box"></div>
-                               ร้านออนไลน์
-                            
-                        </label>
-                        <div class="BNAinputcontain">
-                            
-                            <select class="BNAinputbox" disabled>
-
-                                <option value="0">กรุณาเลือกประเภทร้านค้า</option>
-                                <option value="1">กรุณาเลือกประเภทร้านค้า 1</option>
-                                <option value="2">กรุณาเลือกประเภทร้านค้า 2</option>
-                                <option value="3">กรุณาเลือกประเภทร้านค้า 3</option>
-                                <option value="4">กรุณาเลือกประเภทร้านค้า 4</option>
-                                <option value="5">กรุณาเลือกประเภทร้านค้า 5</option>
 
 
 
-                            </select>  
-                                            
-                        </div>
 
-                        
-                    </div>
+
+        <div class="BNAInfoBody">
+
+            <div class="BNABox">
+
+                <label class=" h5 BNAlabel BNA-EN">CUSTOMER ID</label>
+                <div class="BNAinputcontain">
+                    <input id='customerID' type="text" class="BNAinputbox" disabled>
 
                 </div>
 
-                <div class="BNAFooter">
-                    <div class="salmonlong_button h3 font_Prompt shadow-test">
-                        <p class="font_Prompt primary-text-white BB">บันทึก</p>
+                <label class="font_Prompt h5 BNAlabel">ชื่อผู้ใช้งาน</label>
+                <div class="BNAinputcontain">
 
-                    </div>
-                   
+                    <input id="usernameID" type="text" class="BNAinputbox" disabled>
+
                 </div>
 
-               
+
 
 
             </div>
-        
-           <script>
-                var url = new URL(window.location.href);
-                const id = url.searchParams.get("id");
-           </script>
-    </body>
-</html>
 
+
+
+            <div class="BNABox">
+
+                <label class="font_Prompt h5 BNAlabel">ชื่อสาขา</label>
+                <div class="BNAinputcontain">
+
+                    <input id = 'branchID' type="text" class="BNAinputbox" disabled>
+
+                </div>
+
+                <label class="font_Prompt h5 BNAlabel">รายละเอียด</label>
+                <div class="BNAinputcontainBig">
+
+                    <textarea id="detailID" class="BNAinputbox" disabled></textarea>
+
+
+                </div>
+
+                <label class="font_Prompt h5 BNAlabel">เบอร์โทรร้านค้า</label>
+                <div class="BNAinputcontain">
+
+                    <input id="telid" type="text" class="BNAinputbox" disabled>
+
+                </div>
+
+
+
+            </div>
+
+            <div class="BNABox">
+
+                <label class="font_Prompt h5 BNAlabel">ประเภทร้านค้า<span class="primary-text-salmon">*</span></label>
+                <label class="BNACHKBcontain font_Prompt h5 BNAlabel" for="BNACHKBoxInfo01">
+
+                    <input type="checkbox" class="BNACHK__input" id="BNACHKBoxInfo01" disabled>
+                    <div class="chkbox__box"></div>
+                    มีหน้าร้าน
+
+                </label>
+                <div class="BNAinputcontain">
+
+                    <select class="BNAinputbox" disabled>
+
+                        <option value="0">กรุณาเลือกประเภทร้านค้า</option>
+                        <option value="1">กรุณาเลือกประเภทร้านค้า 1</option>
+                        <option value="2">กรุณาเลือกประเภทร้านค้า 2</option>
+                        <option value="3">กรุณาเลือกประเภทร้านค้า 3</option>
+                        <option value="4">กรุณาเลือกประเภทร้านค้า 4</option>
+                        <option value="5">กรุณาเลือกประเภทร้านค้า 5</option>
+
+
+
+                    </select>
+
+                </div>
+                <label class="BNACHKBcontain font_Prompt h5 BNAlabel" for="BNACHKBoxInfo02">
+
+                    <input type="checkbox" class="BNACHK__input" id="BNACHKBoxInfo02" disabled>
+                    <div class="chkbox__box"></div>
+                    ร้านออนไลน์
+
+                </label>
+                <div class="BNAinputcontain">
+
+                    <select class="BNAinputbox" disabled>
+
+                        <option value="0">กรุณาเลือกประเภทร้านค้า</option>
+                        <option value="1">กรุณาเลือกประเภทร้านค้า 1</option>
+                        <option value="2">กรุณาเลือกประเภทร้านค้า 2</option>
+                        <option value="3">กรุณาเลือกประเภทร้านค้า 3</option>
+                        <option value="4">กรุณาเลือกประเภทร้านค้า 4</option>
+                        <option value="5">กรุณาเลือกประเภทร้านค้า 5</option>
+
+
+
+                    </select>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+        <div class="BNAFooter">
+            <div onclick="history.back()" class="salmonlong_button h3 font_Prompt shadow-test">
+                <p class="font_Prompt primary-text-white BB">บันทึก</p>
+
+            </div>
+
+        </div>
+
+
+
+
+    </div>
+
+
+</body>
+
+</html>
+<script>
+    var url = new URL(window.location.href);
+    const cus_id = url.searchParams.get("id");
+    console.log(cus_id)
+    axios.post('http://192.168.1.18:3000/api/Shopsakainfo').then((result) => {
+        data = result.data.data;
+        console.log(data[0].length)
+        var info;
+        // console.log(data)
+        for(let i = 0 ; i < data[0].length;i++){
+            if (data[0][i].customerID == cus_id){
+                info = data[0][i]
+            }  
+        }
+        innerDucument(info)
+    }).catch((err) => {
+        console.log(err)
+    });
+    function innerDucument(infoInner) {
+        console.log(infoInner.username)
+        document.getElementById('customerID').value = infoInner.customerID;
+        document.getElementById('usernameID').value = infoInner.username;
+        document.getElementById('branchID').value = infoInner.branch;
+        document.getElementById('detailID').innerHTML = infoInner.branch_detail;
+        document.getElementById('telid').value = "#"+infoInner.tel;
+    }
+    function editinfo(e) {
+        window.location.href = "./BN_edit.html?id=" + cus_id
+    }
+</script>

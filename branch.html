@@ -166,7 +166,6 @@
         method: 'post',
         url: 'http://192.168.1.18:3000/api/Shopsakainfo',
         success: (response) => {
-
             data = response.data
             console.log(data)
             if (response.status == 'ok') {
@@ -184,7 +183,7 @@
                 <div class="BNInfoBot">
 
                     <div class="BNInfoTextbox">
-                        <div class="BNInfoText3 font_Prompt h3">
+                        <div id = "${data[0][i].customerID}" onclick="showinfo(this)" class="BNInfoText3 font_Prompt h3">
                             ดูข้อมูลสาขานี้
                         </div>
                         <i class="fa-solid fa-chevron-right"></i>
@@ -219,4 +218,9 @@
             console.log(err)
         }
     })
+    function showinfo(e){
+        
+        window.location.href = "./BN_info.html?id="+e.id
+    }
+    // window.location.href = "./BN_info.html/product=shirt&color=blue&newuser&size=m"
 </script>
