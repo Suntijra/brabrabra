@@ -35,6 +35,8 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
         <!-- date -->
+         <!-- Axios -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
     <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
@@ -98,7 +100,7 @@
                         <div class="reportsell_08_shop">
                                     <div class="reportsell_09_shop">
                                         <p class="h2 BB primary-text-salmon font_Prompt">รายรับรวมวันนี้</p>
-                                        <p class="h0 BB font_Prompt">100,000,000.0</p>
+                                        <p id="amountincome" class="h0 BB font_Prompt"></p>
                                         <p class="h5 font_Prompt">
                                             <i class="fas fa-arrow-left" ></i> 
                                             อัพเดตเมื่อ</p>
@@ -987,92 +989,302 @@ function manuall_minitap_all(id){
 
 
 
-    $(function(){
-        data = {
-            "token": "1234"
-        }
+//$(function() => {
+        // data = {
+        //     "token": "1234"
+        // }
 
-        $.ajax({
-            type: 'post',
-            url: "http://192.168.1.18:3000/api/merchant/report/income",
-            data: data,
-            success: function(resp) {
-                console.log(resp)
-                var res = resp;
-                var html = ``;
-                var all_income = ``;
-                var amount = 0;
-                var reslenght = Object.keys(resp).length
+        // $.ajax({
+        //     type: 'post',
+        //     url: "http://192.168.1.18:3000/api/merchant/report/income",
+        //     data: data,
+        //     success: function(resp) {
+        //         console.log(resp)
+        //         var res = resp;
+        //         var html = ``;
+        //         var all_income = ``;
+        //         var amount = 0;
+        //         var reslenght = Object.keys(resp).length
                 
 
-                for(var i = 0; i < reslenght; i++){
+        //         for(var i = 0; i < reslenght; i++){
 
-                    console.log("date index :",i,":",res[i].date)
+        //             console.log("date index :",i,":",res[i].date)
 
-                    var dateS = new Date(res[i].date)+'';
-                    var split_date = dateS.split(" ");
+        //             var dateS = new Date(res[i].date)+'';
+        //             var split_date = dateS.split(" ");
 
-                    month_th = ['มกราคม','กุมภาพันธ์','มีนาคม','เมษายน','พฤษภาคม','มิถุนายน','กรกฎาคม','สิงหาคม','กันยายน','ตุลาคม','พฤษจิกายน','ธันวาคม']
-                    month_en = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec']
+        //             month_th = ['มกราคม','กุมภาพันธ์','มีนาคม','เมษายน','พฤษภาคม','มิถุนายน','กรกฎาคม','สิงหาคม','กันยายน','ตุลาคม','พฤษจิกายน','ธันวาคม']
+        //             month_en = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec']
 
-                    var year = parseInt(split_date[3]);
+        //             var year = parseInt(split_date[3]);
 
-                    if(year < 2500){
+        //             if(year < 2500){
 
-                        year += 543;
-                        var txt_year = year+'';
-                        var start_year = txt_year.split('');
-                        var start_y = start_year[2]+''+start_year[3]
+        //                 year += 543;
+        //                 var txt_year = year+'';
+        //                 var start_year = txt_year.split('');
+        //                 var start_y = start_year[2]+''+start_year[3]
                     
 
-                        for(var m = 0; m < 12; m++){
-                            if(split_date[1] == month_en[m]){
-                                split_date[1] = month_th[m]
-                                var starty = split_date[2]+' '+split_date[1]+' '+start_y
-                            }
-                        }
-                    }
-                    console.log("date",dateS)
-                    html += `
-                            <div class="reportsell_23_shop ${res[i].status == "สำเร็จ" ? "reportdone_detail_minitap" : "reportcancel_detail_minitap"}">
-                                <div class="reportsell_24_shop">
-                                    <div class="reportsell_25_shop reportsell_26_borderbott_shop">
-                                        <div class="reportsell_26_shop">
-                                                <div class="${res[i].status == "สำเร็จ" ?"SUCCESS_GREEN" : "ERROR_RED"} BB h5_half font_Prompt reportsell_27_shop">รับชำระ</div>
-                                                <div class="reportsell_31_shop">
-                                                        <div class="${res[i].status == "สำเร็จ" 
-                                                            ?"SUCCESS_GREEN" 
-                                                            : "ERROR_RED"} 
-                                                                BB h5_half font_Prompt 
-                                                                ${res[i].status == "สำเร็จ" 
-                                                                    ? "reportsell_28_green_shop" 
-                                                                    : "reportsell_28_red_shop"}">
-                                                                        ${res[i].status}
-                                                        </div>
-                                                </div>
-                                        </div>
-                                        <div class="reportsell_29_shop">
-                                                <p class="h5 font_Prompt">MAX CARD NO.${res[i].maxcardno}</p>
-                                                <p class="h5 font_Prompt">Tel.${res[i].tel}</p>
-                                        </div>
-                                        <div class="reportsell_30_shop">
-                                            <span class="h5 font_Prompt BB"> <i class="fas fa-clock" ></i>
-                                                ${starty}</span>
-                                            <p class="h4 BB  font_Prompt">${res[i].price}.00</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            </div>`;
+        //                 for(var m = 0; m < 12; m++){
+        //                     if(split_date[1] == month_en[m]){
+        //                         split_date[1] = month_th[m]
+        //                         var starty = split_date[2]+' '+split_date[1]+' '+start_y
+        //                     }
+        //                 }
+        //             }
+        //             console.log("date",dateS)
+        //             html += `
+        //                     <div class="reportsell_23_shop ${res[i].status == "สำเร็จ" ? "reportdone_detail_minitap" : "reportcancel_detail_minitap"}">
+        //                         <div class="reportsell_24_shop">
+        //                             <div class="reportsell_25_shop reportsell_26_borderbott_shop">
+        //                                 <div class="reportsell_26_shop">
+        //                                         <div class="${res[i].status == "สำเร็จ" ?"SUCCESS_GREEN" : "ERROR_RED"} BB h5_half font_Prompt reportsell_27_shop">รับชำระ</div>
+        //                                         <div class="reportsell_31_shop">
+        //                                                 <div class="${res[i].status == "สำเร็จ" 
+        //                                                     ?"SUCCESS_GREEN" 
+        //                                                     : "ERROR_RED"} 
+        //                                                         BB h5_half font_Prompt 
+        //                                                         ${res[i].status == "สำเร็จ" 
+        //                                                             ? "reportsell_28_green_shop" 
+        //                                                             : "reportsell_28_red_shop"}">
+        //                                                                 ${res[i].status}
+        //                                                 </div>
+        //                                         </div>
+        //                                 </div>
+        //                                 <div class="reportsell_29_shop">
+        //                                         <p class="h5 font_Prompt">MAX CARD NO.${res[i].maxcardno}</p>
+        //                                         <p class="h5 font_Prompt">Tel.${res[i].tel}</p>
+        //                                 </div>
+        //                                 <div class="reportsell_30_shop">
+        //                                     <span class="h5 font_Prompt BB"> <i class="fas fa-clock" ></i>
+        //                                         ${starty}</span>
+        //                                     <p class="h4 BB  font_Prompt">${res[i].price}.00</p>
+        //                                 </div>
+        //                             </div>
+        //                         </div>
+        //                     </div>
+        //                     </div>`;
 
-                all_income +=`
-                    <div class="reportsell_17_all_shop ${res[i].status == "สำเร็จ" ? "Nuall_success_minitap" : "Nuall_cancel_minitap"}">
-                        <div class="reportsell_18_all_shop">
+        //         all_income +=`
+        //             <div class="reportsell_17_all_shop ${res[i].status == "สำเร็จ" ? "Nuall_success_minitap" : "Nuall_cancel_minitap"}">
+        //                 <div class="reportsell_18_all_shop">
+        //                     <div class="reportsell_25_shop reportsell_26_borderbott_shop">
+        //                         <div class="reportsell_26_shop">
+        //                                 <div class="${res[i].status == "สำเร็จ"  ? "SUCCESS_GREEN" : "ERROR_RED"} BB h5_half font_Prompt reportsell_27_shop">รับชำระ</div>
+        //                                 <div class="reportsell_31_shop">
+        //                                         <div class="${res[i].status == "สำเร็จ"  ? "SUCCESS_GREEN" : "ERROR_RED"} BB h5_half font_Prompt ${res[i].status == "สำเร็จ"  ? "reportsell_28_green_shop" : "reportsell_28_red_shop"}">${res[i].status}</div>
+        //                                 </div>
+        //                         </div>
+        //                         <div class="reportsell_29_shop">
+        //                                 <p class="h5 font_Prompt">MAX CARD NO.${res[i].maxcardno}</p>
+        //                                 <p class="h5 font_Prompt">Tel.${res[i].tel}</p>
+        //                         </div>
+        //                         <div class="reportsell_30_shop">
+        //                             <span class="h5 font_Prompt BB"> <i class="fas fa-clock" ></i>
+        //                                 ${res[i].date}</span>
+        //                             <p class="h4 BB  font_Prompt">${res[i].price}.00</p>
+        //                         </div>
+        //                     </div>
+        //                 </div>   
+        //             </div>
+        //         `;
+        //         console.log("Before :",amount)
+        //         if(res[i].price != "สำเร็จ")
+        //             continue
+        //         amount += parseFloat(res[i].price);
+        //         console.log("After :",amount)
+        //         }
+        //         //console.log('success ===>',html)
+
+        //         $('#report_income').append(html)
+        //         $('#report_all').append(all_income)
+        //         //$('#totalprice').html(html_tP)
+        //     }
+        // })
+
+
+
+        // $.ajax({
+        //     type: "post",
+        //     url: "http://192.168.1.18:3000/api/merchant/report/withdraw",
+        //     data: data,
+        //     success: function(resp){
+        //         console.log(resp)
+        //         var res = resp;
+        //         var html = ``;
+        //         var all_withdraw = ``;
+        //         var amount = 0;
+        //         var reslenght = Object.keys(resp).length;
+
+
+
+        //         for(var i = 0; i < reslenght; i++){
+
+        //             console.log("date index :",i,":",res[i].date)
+
+        //             var dateS = new Date(res[i].date)+'';
+        //             var split_date = dateS.split(" ");
+
+        //             month_th = ['มกราคม','กุมภาพันธ์','มีนาคม','เมษายน','พฤษภาคม','มิถุนายน','กรกฎาคม','สิงหาคม','กันยายน','ตุลาคม','พฤษจิกายน','ธันวาคม']
+        //             month_en = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec']
+
+        //             var year = parseInt(split_date[3]);
+
+        //             if(year < 2500){
+
+        //                 year += 543;
+        //                 var txt_year = year+'';
+        //                 var start_year = txt_year.split('');
+        //                 var start_y = start_year[2]+''+start_year[3]
+
+
+        //                 for(var m = 0; m < 12; m++){
+        //                     if(split_date[1] == month_en[m]){
+        //                         split_date[1] = month_th[m]
+        //                         var starty = split_date[2]+' '+split_date[1]+' '+start_y
+        //                     }
+        //                 }
+        //             }
+        //             console.log("date",dateS)
+
+
+        //             html +=`
+        //                 <div class="reportsell_15_withd_shop ${res[i].status == "สำเร็จ" ? "withdraw_success_minitap" : "withdraw_cancel_minitap"}">
+        //                     <div class="reportsell_16_withd_shop">
+        //                         <div class="reportsell_25_shop reportsell_26_borderbott_shop">
+        //                             <div class="reportsell_26_shop">
+        //                                     <div class="${res[i].status == "สำเร็จ" ? "SUCCESS_GREEN" : "ERROR_RED"} BB h5_half font_Prompt reportsell_27_shop">รับชำระ</div>
+        //                                     <div class="reportsell_31_shop">
+        //                                             <div class="${res[i].status == "สำเร็จ" ? "SUCCESS_GREEN" : "ERROR_RED"} BB h5_half font_Prompt ${res[i].status == "สำเร็จ" ? "reportsell_28_green_shop" : "reportsell_28_red_shop"}">${res[i].status}</div>
+        //                                     </div>
+        //                             </div>
+        //                             <div class="reportsell_29_shop">
+        //                                     <p class="h5 font_Prompt">MAX CARD NO.${res[i].maxcardno}</p>
+        //                                     <p class="h5 font_Prompt">Tel.${res[i].tel}</p>
+        //                             </div>
+        //                             <div class="reportsell_30_shop">
+        //                                 <span class="h5 font_Prompt BB"> <i class="fas fa-clock"></i>
+        //                                     ${starty}</span>
+        //                                 <p class="h4 BB  font_Prompt">${res[i].price}.00</p>
+        //                             </div>
+        //                         </div>
+        //                     </div>  
+        //                 </div>
+        //             `;
+        //         all_withdraw +=`
+        //             <div class="reportsell_17_all_shop ${res[i].status == "สำเร็จ" ? "Nuall_success_minitap" : "Nuall_cancel_minitap"}">
+        //                 <div class="reportsell_18_all_shop">
+        //                     <div class="reportsell_25_shop reportsell_26_borderbott_shop">
+        //                         <div class="reportsell_26_shop">
+        //                                 <div class="${res[i].status == "สำเร็จ" ? "SUCCESS_GREEN" : "ERROR_RED"} BB h5_half font_Prompt reportsell_27_shop">รับชำระ</div>
+        //                                 <div class="reportsell_31_shop">
+        //                                         <div class="${res[i].status == "สำเร็จ" ? "SUCCESS_GREEN" : "ERROR_RED"} BB h5_half font_Prompt ${res[i].status == "สำเร็จ" ? "reportsell_28_green_shop" : "reportsell_28_red_shop"}">${res[i].status}</div>
+        //                                 </div>
+        //                         </div>
+        //                         <div class="reportsell_29_shop">
+        //                                 <p class="h5 font_Prompt">MAX CARD NO.${res[i].maxcardno}</p>
+        //                                 <p class="h5 font_Prompt">Tel.${res[i].tel}</p>
+        //                         </div>
+        //                         <div class="reportsell_30_shop">
+        //                             <span class="h5 font_Prompt BB"> <i class="fas fa-clock" ></i>
+        //                                 ${res[i].date}</span>
+        //                             <p class="h4 BB  font_Prompt">${res[i].price}.00</p>
+        //                         </div>
+        //                     </div>
+        //                 </div>   
+        //             </div>
+        //         `;
+        //         console.log("Before :",amount)
+        //         if(res[i].price != "สำเร็จ")
+        //             continue
+        //         amount += parseFloat(res[i].price);
+        //         console.log("After :",amount)
+        //         }
+        //         $('#report_withdraw').html(html);
+        //         $('#report_all').append(all_withdraw);
+        //         $('#amountwithdraw').text(amount);
+        //     },
+        //     error(d){
+        //         console.error(d);
+        //     }
+        // })
+    // })
+
+    // axios.post("http://192.168.1.18:3000/api/merchant/report/withdraw",{
+    //     token : '1234'
+    // }).then(result =>{
+    //     console.log('sssssssssssssssssssssssssssssssssssssss')
+    //     console.log(result)
+    // }).catch(err=>{
+    //     console.log(err)
+    // })
+    var settings1 = {
+  "url": "http://192.168.1.18:3000/api/merchant/report/income",
+  "method": "POST",
+  "timeout": 0,
+  "headers": {
+    "Content-Type": "application/json"
+  },
+  "data": JSON.stringify({
+    "token": "1234"
+  }),
+};
+
+$.ajax(settings1).done(function (response) {
+  console.log(response);   
+        var res = response;
+        var html = ``;
+        var all_income = ``;
+        var amount = 0;
+        var reslenght = Object.keys(response).length
+        
+
+        for(var i = 0; i < reslenght; i++){
+
+            console.log("date index :",i,":",res[i].date)
+
+            var dateS = new Date(res[i].date)+'';
+            var split_date = dateS.split(" ");
+
+            month_th = ['มกราคม','กุมภาพันธ์','มีนาคม','เมษายน','พฤษภาคม','มิถุนายน','กรกฎาคม','สิงหาคม','กันยายน','ตุลาคม','พฤษจิกายน','ธันวาคม']
+            month_en = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec']
+
+            var year = parseInt(split_date[3]);
+
+            if(year < 2500){
+
+                year += 543;
+                var txt_year = year+'';
+                var start_year = txt_year.split('');
+                var start_y = start_year[2]+''+start_year[3]
+            
+
+                for(var m = 0; m < 12; m++){
+                    if(split_date[1] == month_en[m]){
+                        split_date[1] = month_th[m]
+                        var starty = split_date[2]+' '+split_date[1]+' '+start_y
+                    }
+                }
+            }
+            console.log("date",dateS)
+            html += `
+                    <div class="reportsell_23_shop ${res[i].status == "สำเร็จ" ? "reportdone_detail_minitap" : "reportcancel_detail_minitap"}">
+                        <div class="reportsell_24_shop">
                             <div class="reportsell_25_shop reportsell_26_borderbott_shop">
                                 <div class="reportsell_26_shop">
-                                        <div class="${res[i].status == "สำเร็จ"  ? "SUCCESS_GREEN" : "ERROR_RED"} BB h5_half font_Prompt reportsell_27_shop">รับชำระ</div>
+                                        <div class="${res[i].status == "สำเร็จ" ?"SUCCESS_GREEN" : "ERROR_RED"} BB h5_half font_Prompt reportsell_27_shop">รับชำระ</div>
                                         <div class="reportsell_31_shop">
-                                                <div class="${res[i].status == "สำเร็จ"  ? "SUCCESS_GREEN" : "ERROR_RED"} BB h5_half font_Prompt ${res[i].status == "สำเร็จ"  ? "reportsell_28_green_shop" : "reportsell_28_red_shop"}">${res[i].status}</div>
+                                                <div class="${res[i].status == "สำเร็จ" 
+                                                    ?"SUCCESS_GREEN" 
+                                                    : "ERROR_RED"} 
+                                                        BB h5_half font_Prompt 
+                                                        ${res[i].status == "สำเร็จ" 
+                                                            ? "reportsell_28_green_shop" 
+                                                            : "reportsell_28_red_shop"}">
+                                                                ${res[i].status}
+                                                </div>
                                         </div>
                                 </div>
                                 <div class="reportsell_29_shop">
@@ -1081,38 +1293,69 @@ function manuall_minitap_all(id){
                                 </div>
                                 <div class="reportsell_30_shop">
                                     <span class="h5 font_Prompt BB"> <i class="fas fa-clock" ></i>
-                                        ${res[i].date}</span>
+                                        ${starty}</span>
                                     <p class="h4 BB  font_Prompt">${res[i].price}.00</p>
                                 </div>
                             </div>
-                        </div>   
+                        </div>
                     </div>
-                `;
-                console.log("Before :",amount)
-                if(res[i].price != "สำเร็จ")
-                    continue
-                amount += parseFloat(res[i].price);
-                console.log("After :",amount)
-                }
-                //console.log('success ===>',html)
+                    </div>`;
 
-                $('#report_income').append(html)
-                $('#report_all').append(all_income)
-                //$('#totalprice').html(html_tP)
-            }
-        })
+        all_income +=`
+            <div class="reportsell_17_all_shop ${res[i].status == "สำเร็จ" ? "Nuall_success_minitap" : "Nuall_cancel_minitap"}">
+                <div class="reportsell_18_all_shop">
+                    <div class="reportsell_25_shop reportsell_26_borderbott_shop">
+                        <div class="reportsell_26_shop">
+                                <div class="${res[i].status == "สำเร็จ"  ? "SUCCESS_GREEN" : "ERROR_RED"} BB h5_half font_Prompt reportsell_27_shop">รับชำระ</div>
+                                <div class="reportsell_31_shop">
+                                        <div class="${res[i].status == "สำเร็จ"  ? "SUCCESS_GREEN" : "ERROR_RED"} BB h5_half font_Prompt ${res[i].status == "สำเร็จ"  ? "reportsell_28_green_shop" : "reportsell_28_red_shop"}">${res[i].status}</div>
+                                </div>
+                        </div>
+                        <div class="reportsell_29_shop">
+                                <p class="h5 font_Prompt">MAX CARD NO.${res[i].maxcardno}</p>
+                                <p class="h5 font_Prompt">Tel.${res[i].tel}</p>
+                        </div>
+                        <div class="reportsell_30_shop">
+                            <span class="h5 font_Prompt BB"> <i class="fas fa-clock" ></i>
+                                ${res[i].date}</span>
+                            <p class="h4 BB  font_Prompt">${res[i].price}.00</p>
+                        </div>
+                    </div>
+                </div>   
+            </div>
+        `;
+        console.log("Before",i," :",amount)
+        if(res[i].status != "สำเร็จ")
+            continue
+        amount += parseFloat(res[i].price);
+        console.log("After :",amount)
+        }
+        $('#report_income').append(html)
+        $('#report_all').append(all_income)
+        $('#amountincome').text(amount)
+});
 
-        $.ajax({
-            type: "post",
-            url: "http://192.168.1.18:3000/api/merchant/report/withdraw",
-            data: data,
-            success: function(resp){
-                console.log(resp)
-                var res = resp;
+
+
+    var settings = {
+  "url": "http://192.168.1.18:3000/api/merchant/report/withdraw",
+  "method": "POST",
+  "timeout": 0,
+  "headers": {
+    "Content-Type": "application/json"
+  },
+  "data": JSON.stringify({
+    "token": "1234"
+  }),
+};
+
+$.ajax(settings).done(function (response) {
+  console.log(response);
+  var res = response;
                 var html = ``;
                 var all_withdraw = ``;
                 var amount = 0;
-                var reslenght = Object.keys(resp).length;
+                var reslenght = Object.keys(response).length;
 
 
 
@@ -1193,7 +1436,7 @@ function manuall_minitap_all(id){
                     </div>
                 `;
                 console.log("Before :",amount)
-                if(res[i].price != "สำเร็จ")
+                if(res[i].status != "สำเร็จ")
                     continue
                 amount += parseFloat(res[i].price);
                 console.log("After :",amount)
@@ -1201,12 +1444,7 @@ function manuall_minitap_all(id){
                 $('#report_withdraw').html(html);
                 $('#report_all').append(all_withdraw);
                 $('#amountwithdraw').text(amount);
-            },
-            error(d){
-                console.error(d);
-            }
-        })
-    })
-
+            
+});
 
 </script>
