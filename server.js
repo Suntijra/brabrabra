@@ -153,7 +153,7 @@ var data = [[{
 
 // -------------------------------Team Teelek-------------------------------
 
-app.post('/api/merchant/report/withdraw', (req,res) =>{
+app.post('/api/merchant/report/withdraw', (req, res) => {
     var token1 = req.body.token
     data = [{
         Respmessage: 'Success',
@@ -162,56 +162,56 @@ app.post('/api/merchant/report/withdraw', (req,res) =>{
         date: '2022-07-01 00:00:00',
         status: 'รายการยกเลิก',
         price: 100.00
-    },{
+    }, {
         Respmessage: 'Success',
         maxcardno: 'WithDraw',
         tel: '0123456789',
         date: '2022-07-01 00:00:00',
         status: 'รายการยกเลิก',
         price: 100.00
-    },{
+    }, {
         Respmessage: 'Success',
         maxcardno: 'WithDraw',
         tel: '0123456789',
         date: '2022-07-01 00:00:00',
         status: 'รายการยกเลิก',
         price: 100.00
-    },{
+    }, {
         Respmessage: 'Success',
         maxcardno: 'WithDraw',
         tel: '0123456789',
         date: '2022-07-01 00:00:00',
         status: 'รายการยกเลิก',
         price: 100.00
-    },{
+    }, {
         Respmessage: 'Success',
         maxcardno: 'WithDraw',
         tel: '0123456789',
         date: '2022-07-01 00:00:00',
         status: 'รายการยกเลิก',
         price: 100.00
-    },{
+    }, {
         Respmessage: 'Success',
         maxcardno: 'WithDraw',
         tel: '0123456789',
         date: '2022-07-01 00:00:00',
         status: 'รายการยกเลิก',
         price: 100.00
-    },{
+    }, {
         Respmessage: 'Success',
         maxcardno: 'WithDraw',
         tel: '0123456789',
         date: '2022-07-01 00:00:00',
         status: 'รายการยกเลิก',
         price: 100.00
-    },{
+    }, {
         Respmessage: 'Success',
         maxcardno: 'WithDraw',
         tel: '0123456789',
         date: '2022-07-01 00:00:00',
         status: 'รายการยกเลิก',
         price: 100.00
-    },{
+    }, {
         Respmessage: 'Success',
         maxcardno: 'WithDraw',
         tel: '0123456789',
@@ -219,54 +219,53 @@ app.post('/api/merchant/report/withdraw', (req,res) =>{
         status: 'รายการยกเลิก',
         price: 100.00
     }]
-
-    if(token1 == '1234'){
-        try{
-            return res.status(200).json(data)      
-        }catch(er){
-            console.log("error ===>",er)
-            return res.status(500).json({
-                error: err.message
-            })
+    try {
+        if (token1 == '1234') {
+            return res.status(200).json(data)
         }
+    } catch (er) {
+        console.log("error ===>", er)
+        return res.status(500).json({
+            error: err.message
+        })
     }
 })
 app.post('/api/merchant/report/income', (req, res) => {
     var token = req.body.token
     var data = [{
-            Respmessage: 'Success',
-            maxcardno: '162729252926',
-            tel: '0987654321',
-            date: '2022-07-01 00:00:00',
-            status: 'สำเร็จ',
-            price: 50.00
-        },{
-            Respmessage: 'Success',
-            maxcardno: '162729252926',
-            tel: '0987654321',
-            date: '2022-07-01 00:00:00',
-            status: 'สำเร็จ',
-            price: 50.00
-        },{
-            Respmessage: 'Success',
-            maxcardno: '162729252926',
-            tel: '0987654321',
-            date: '2022-07-01 00:00:00',
-            status: 'รายการยกเลิก',
-            price: 50.00
-        },{
-            Respmessage: 'Success',
-            maxcardno: '17631773897',
-            tel: '0123456789',
-            date: '2022-07-01 00:00:00',
-            status: 'รายการยกเลิก',
-            price: 100.00
-        }]
-    if(token == '1234'){
-        try{
-            return res.status(200).json(data)      
-        }catch(er){
-            console.log("error ===>",er)
+        Respmessage: 'Success',
+        maxcardno: '162729252926',
+        tel: '0987654321',
+        date: '2022-07-01 00:00:00',
+        status: 'สำเร็จ',
+        price: 50.00
+    }, {
+        Respmessage: 'Success',
+        maxcardno: '162729252926',
+        tel: '0987654321',
+        date: '2022-07-01 00:00:00',
+        status: 'สำเร็จ',
+        price: 50.00
+    }, {
+        Respmessage: 'Success',
+        maxcardno: '162729252926',
+        tel: '0987654321',
+        date: '2022-07-01 00:00:00',
+        status: 'รายการยกเลิก',
+        price: 50.00
+    }, {
+        Respmessage: 'Success',
+        maxcardno: '17631773897',
+        tel: '0123456789',
+        date: '2022-07-01 00:00:00',
+        status: 'รายการยกเลิก',
+        price: 100.00
+    }]
+    if (token == '1234') {
+        try {
+            return res.status(200).json(data)
+        } catch (er) {
+            console.log("error ===>", er)
             return res.status(500).json({
                 error: err.message
             })
