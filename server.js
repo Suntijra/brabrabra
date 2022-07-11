@@ -60,7 +60,6 @@ app.post('/api/addsaka', (req, resp) => {
         })
         return resp.status(200).json(
             {
-                data : adddata,
                 status: "ok"
             }
         )
