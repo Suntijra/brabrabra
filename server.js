@@ -8,7 +8,6 @@ app.use(bodyParser.json());
 app.use(cors());
 const port = 3000
 app.listen(port, () => console.log(`Example app listening on port ${port}!`))
-
 app.post('/api/Shopsakainfo', (req, resp) => {
     try {
         return resp.status(200).json(
@@ -78,6 +77,12 @@ app.post('/api/updatainfo', (req, resp) => {
     try {
         let obj = req.body.obj
         console.log(obj)
+        for (let i = 0; i < data.length; i++) {
+            if (data[i].customerID == obj.customerID) {
+                data[i].customerID = obj.customerID
+                data[i].customerName = obj.customerName
+            }
+        }
         return resp.status(200).json({
             status: "ok",
         })
@@ -90,25 +95,6 @@ app.post('/api/updatainfo', (req, resp) => {
 
 })
 
-
-
-
-
-// adddata.push({
-//     'ชื่อผู้ใช้งาน': user,
-//     'รหัสผ่าน': pwd,
-//     'ชื่อสาขา': bnname,
-//     'รายละเอียด': detail,
-//     'เบอร์โทรร้านค้า': tel,
-//     'รายละเอียดของสาขา': bndetail,
-//     'ผู้ที่สามารถติดต่อได้': contact,
-//     'ที่ตั้งร้านค้า': location,
-//     'เลขที่ร้านค้า': shopid,
-//     'จังหวัด': province,
-//     'อำเภอ': district,
-//     'ตำบล': tumbon,
-//     'รหัสไปรษณีย์': zipcode,
-//     })
 var data = [[{
     "customerID": "1111",
     "shopName": "เลิฟมีเทนเดอร์",
