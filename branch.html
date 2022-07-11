@@ -190,9 +190,9 @@
                         <i class="fa-solid fa-chevron-right"></i>
                     </div>
                     <div class="onoffswitch">
-                        <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch"
+                        <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="${i}myonoffswitch"
                             tabindex="0" checked>
-                        <label class="onoffswitch-label" for="myonoffswitch">
+                        <label class="onoffswitch-label" for="${i}myonoffswitch">
                             <span class="onoffswitch-inner"></span>
                             <span class="onoffswitch-switch"></span>
                         </label>
@@ -200,8 +200,16 @@
 
                 </div>
             </div>`
+                   
                 }
                 document.getElementById("frontdata").innerHTML = htmlInner
+                for (let i = 0; i < data[0].length; i++) {
+                    if (data[0][i].status == 'open') {
+                        document.getElementById(i+'myonoffswitch').checked = true
+                    } else {
+                        document.getElementById(i+'myonoffswitch').checked = false
+                    }
+                }
                 // document.getElementById("demo").innerHTML = html;
             } else {
                 console.log('ลง else')

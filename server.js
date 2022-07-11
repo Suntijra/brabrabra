@@ -80,7 +80,7 @@ app.post('/api/addsaka', (req, resp) => {
 
 
 var data = [[{
-    "customerID": "00388",
+    "customerID": "1111",
     "shopName": "เลิฟมีเทนเดอร์",
     "branch": "สำนักงานใหญ่ 1",
     "username": "admin123",
@@ -90,17 +90,17 @@ var data = [[{
     "typeShope": "{\"storeFront\":\"yes\",\"typeShope\":\"ร้านขายเครื่องสำอาง\"}"
 },
 {
-    "customerID": "00388",
+    "customerID": "2222",
     "shopName": "เลิฟมีเทนเดอร์",
     "branch": "สำนักงานใหญ่ 20",
     "username": "admin23",
-    "status": "open",
+    "status": "close",
     "branch_detail": "การทำน้อยกว่าที่ทำย้อมดีกว่าไม่ทำอะไรเลย",
     "tel": "06x-xxxx-xxx",
     "typeShope": "{\"storeFront\":\"yes\",\"typeShope\":\"ร้านขายเครื่องสำอาง\"}"
 },
 {
-    "customerID": "00388",
+    "customerID": "3333",
     "shopName": "เลิฟมีเทนเดอร์",
     "branch": "สำนักงานใหญ่ 112",
     "username": "admin3",
@@ -110,11 +110,11 @@ var data = [[{
     "typeShope": "{\"storeFront\":\"yes\",\"typeShope\":\"ร้านขายเครื่องสำอาง\"}"
 },
 {
-    "customerID": "00388",
+    "customerID": "4444",
     "shopName": "เลิฟมีเทนเดอร์",
     "branch": "สำนักงานใหญ่ 112",
     "username": "admin3",
-    "status": "open",
+    "status": "close",
     "branch_detail": "การทำน้อยกว่าที่ทำย้อมดีกว่าไม่ทำอะไรเลย",
     "tel": "09x-xxxx-xxx",
     "typeShope": "{\"storeFront\":\"yes\",\"typeShope\":\"ร้านขายเครื่องสำอาง\"}"
