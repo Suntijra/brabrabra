@@ -151,4 +151,83 @@ var data = [[{
 }
 ]]
 
+// -------------------------------Team Teelek-------------------------------
 
+app.post('/api/merchant/report/withdraw', (req,res) =>{
+    var token1 = req.body.token
+    data = [{
+        Respmessage: 'Success',
+        maxcardno: 'WithDraw',
+        tel: '0123456789',
+        date: '2022-07-01 00:00:00',
+        status: 'รายการยกเลิก',
+        price: 100.00
+    },{
+        Respmessage: 'Success',
+        maxcardno: 'WithDraw',
+        tel: '0123456789',
+        date: '2022-07-01 00:00:00',
+        status: 'รายการยกเลิก',
+        price: 100.00
+    },{
+        Respmessage: 'Success',
+        maxcardno: 'WithDraw',
+        tel: '0123456789',
+        date: '2022-07-01 00:00:00',
+        status: 'รายการยกเลิก',
+        price: 100.00
+    },{
+        Respmessage: 'Success',
+        maxcardno: 'WithDraw',
+        tel: '0123456789',
+        date: '2022-07-01 00:00:00',
+        status: 'รายการยกเลิก',
+        price: 100.00
+    },{
+        Respmessage: 'Success',
+        maxcardno: 'WithDraw',
+        tel: '0123456789',
+        date: '2022-07-01 00:00:00',
+        status: 'รายการยกเลิก',
+        price: 100.00
+    },{
+        Respmessage: 'Success',
+        maxcardno: 'WithDraw',
+        tel: '0123456789',
+        date: '2022-07-01 00:00:00',
+        status: 'รายการยกเลิก',
+        price: 100.00
+    },{
+        Respmessage: 'Success',
+        maxcardno: 'WithDraw',
+        tel: '0123456789',
+        date: '2022-07-01 00:00:00',
+        status: 'รายการยกเลิก',
+        price: 100.00
+    },{
+        Respmessage: 'Success',
+        maxcardno: 'WithDraw',
+        tel: '0123456789',
+        date: '2022-07-01 00:00:00',
+        status: 'รายการยกเลิก',
+        price: 100.00
+    },{
+        Respmessage: 'Success',
+        maxcardno: 'WithDraw',
+        tel: '0123456789',
+        date: '2022-07-01 00:00:00',
+        status: 'รายการยกเลิก',
+        price: 100.00
+    }]
+
+    if(token1 == '1234'){
+        try{
+            return res.status(200).json(data)      
+        }catch(er){
+            console.log("error ===>",er)
+            return res.status(500).json({
+                error: err.message
+            })
+        }
+    }
+})
