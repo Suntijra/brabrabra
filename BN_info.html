@@ -55,7 +55,7 @@
 
 
         <div class="backBtnContainer BNATOP1">
-            <div class="back_button" >
+            <div class="back_button">
                 <i class="fas fa-arrow-left"></i>
             </div>
 
@@ -110,7 +110,7 @@
                 <label class="font_Prompt h5 BNAlabel">ชื่อสาขา</label>
                 <div class="BNAinputcontain">
 
-                    <input id = 'branchID' type="text" class="BNAinputbox" disabled>
+                    <input id='branchID' type="text" class="BNAinputbox" disabled>
 
                 </div>
 
@@ -209,15 +209,15 @@
     var url = new URL(window.location.href);
     const cus_id = url.searchParams.get("id");
     console.log(cus_id)
+    var info;
     axios.post('http://192.168.1.18:3000/api/Shopsakainfo').then((result) => {
         data = result.data.data;
         console.log(data[0].length)
-        var info;
         // console.log(data)
-        for(let i = 0 ; i < data[0].length;i++){
-            if (data[0][i].customerID == cus_id){
+        for (let i = 0; i < data[0].length; i++) {
+            if (data[0][i].customerID == cus_id) {
                 info = data[0][i]
-            }  
+            }
         }
         innerDucument(info)
     }).catch((err) => {
@@ -229,9 +229,14 @@
         document.getElementById('usernameID').value = infoInner.username;
         document.getElementById('branchID').value = infoInner.branch;
         document.getElementById('detailID').innerHTML = infoInner.branch_detail;
-        document.getElementById('telid').value = "#"+infoInner.tel;
+        document.getElementById('telid').value = "#" + infoInner.tel;
     }
     function editinfo(e) {
-        window.location.href = "./BN_edit.html?id=" + cus_id
+        console.log()
+        let user = document.getElementById('usernameID').value = info.username;
+        let branch = document.getElementById('branchID').value = info.branch;
+        let branchDetail = document.getElementById('detailID').innerHTML = info.branch_detail;
+        let tel = document.getElementById('telid').value = info.tel;
+        window.location.href = "./BN_edit.html?id=" + cus_id + '&user=' + user + '&branch=' + branch + '&branchDetail=' + branchDetail + '&tel=' + tel;
     }
 </script>

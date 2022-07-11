@@ -18,6 +18,8 @@
     <link rel="stylesheet" type="text/css" href="./globle_newmerchant.css" />
     <link rel="stylesheet" type="text/css" href="./slick-1.8.1/slick/slick.css" />
     <link rel="stylesheet" type="text/css" href="./slick-1.8.1/slick/slick-theme.css" />
+    <!-- Axios -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
     <!-- script -->
     <script type="text/javascript" src="./slick-1.8.1/slick/slick.min.js"></script>
@@ -82,7 +84,7 @@
                 <label class="font_Prompt h5 BNAlabel">ชื่อผู้ใช้งาน</label>
                 <div class="BNAinputcontain">
 
-                    <input type="text" class="BNAinputbox">
+                    <input id="usernameID" type="text" class="BNAinputbox">
 
                 </div>
 
@@ -99,14 +101,14 @@
                 <label class="font_Prompt h5 BNAlabel">ชื่อสาขา</label>
                 <div class="BNAinputcontain">
 
-                    <input type="text" class="BNAinputbox">
+                    <input id='branchID' type="text" class="BNAinputbox">
 
                 </div>
 
                 <label class="font_Prompt h5 BNAlabel">รายละเอียด<span class="primary-text-salmon">*</span></label>
                 <div class="BNAinputcontainBig">
 
-                    <textarea class="BNAinputbox">    </textarea>
+                    <textarea id="detailID" class="BNAinputbox">    </textarea>
 
 
                 </div>
@@ -114,7 +116,7 @@
                 <label class="font_Prompt h5 BNAlabel">เบอร์โทรร้านค้า<span class="primary-text-salmon">*</span></label>
                 <div class="BNAinputcontain">
 
-                    <input type="text" class="BNAinputbox">
+                    <input id="telid" type="text" class="BNAinputbox">
 
                 </div>
 
@@ -122,7 +124,7 @@
                         class="primary-text-salmon">*</span></label>
                 <div class="BNAinputcontainBig">
 
-                    <textarea class="BNAinputbox">    </textarea>
+                    <textarea id="sakadetailID" class="BNAinputbox">    </textarea>
 
 
                 </div>
@@ -131,7 +133,7 @@
                         class="primary-text-salmon">*</span></label>
                 <div class="BNAinputcontain">
 
-                    <input type="text" class="BNAinputbox">
+                    <input id="telCanconnect" type="text" class="BNAinputbox">
 
                 </div>
 
@@ -140,21 +142,21 @@
                         class="primary-text-salmon">*</span></label>
                 <div class="BNAinputcontain">
                     <img src="imgs/pin.png" alt="" class="BNAIcon">
-                    <input type="text" class="BNAinputbox1">
+                    <input id="position_map" type="text" class="BNAinputbox1">
 
                 </div>
 
                 <label class="font_Prompt h5 BNAlabel">เลขที่ร้านค้า<span class="primary-text-salmon">*</span></label>
                 <div class="BNAinputcontain">
 
-                    <input type="text" class="BNAinputbox">
+                    <input id="no_shopID" type="text" class="BNAinputbox">
 
                 </div>
 
                 <label class="font_Prompt h5 BNAlabel">จังหวัด<span class="primary-text-salmon">*</span></label>
                 <div class="BNAinputcontain">
 
-                    <select class="BNAinputbox">
+                    <select id="provinceID" class="BNAinputbox">
 
                         <option value="0">กรุณาเลือกจังหวัด</option>
                         <option value="1">กรุณาเลือกจังหวัด 1</option>
@@ -173,7 +175,7 @@
                 <label class="font_Prompt h5 BNAlabel">เขต/อำเภอ<span class="primary-text-salmon">*</span></label>
                 <div class="BNAinputcontain">
 
-                    <select class="BNAinputbox">
+                    <select id="districtID" class="BNAinputbox">
 
                         <option value="0">กรุณาเลือกเขต/อำเภอ</option>
                         <option value="1">กรุณาเลือกเขต/อำเภอ 1</option>
@@ -192,7 +194,7 @@
                 <label class="font_Prompt h5 BNAlabel">แขวง/ตำบล<span class="primary-text-salmon">*</span></label>
                 <div class="BNAinputcontain">
 
-                    <select class="BNAinputbox">
+                    <select id="tumbonID" class="BNAinputbox">
 
                         <option value="0">กรุณาเลือกแขวง/ตำบล</option>
                         <option value="1">กรุณาเลือกแขวง/ตำบล 1</option>
@@ -211,7 +213,7 @@
                 <label class="font_Prompt h5 BNAlabel">รหัสไปรษณีย์<span class="primary-text-salmon">*</span></label>
                 <div class="BNAinputcontain">
 
-                    <input type="text" class="BNAinputbox">
+                    <input id="zipcode" type="text" class="BNAinputbox">
 
                 </div>
 
@@ -277,7 +279,7 @@
         </div>
 
         <div class="BNAFooter">
-            <div class="salmonlong_button h3 font_Prompt shadow-test">
+            <div id="btn_save" class="salmonlong_button h3 font_Prompt shadow-test">
                 <p class="font_Prompt primary-text-white BB">บันทึก</p>
 
             </div>
@@ -294,9 +296,69 @@
 
 </html>
 <script>
-var url = new URL(window.location.href);
+    var url = new URL(window.location.href);
     const cus_id = url.searchParams.get("id");
-    document.getElementById("cus_id").value = cus_id;
-    // console.log('getgetget');
-    console.log(cus_id) 
+    const userBF = url.searchParams.get("user");
+    const branchBF = url.searchParams.get("branch");
+    const branchDetailBF = url.searchParams.get("branchDetail");
+    const telid_BF = url.searchParams.get("tel");
+    console.log(cus_id, userBF, branchBF, branchDetailBF, telid_BF);
+    document.getElementById("cus_id").value = "#" + cus_id;
+    document.getElementById('usernameID').value = userBF
+    document.getElementById('branchID').value = branchBF
+    document.getElementById('detailID').value = branchDetailBF
+    document.getElementById('telid').value = telid_BF
+
+
+    document.getElementById("btn_save").addEventListener("click", function(){
+        axios.post('http://192.168.1.18:3000/api/updatainfo', {
+        obj: Objectupdate()
+    }).then((result) => {
+        console.log(result)
+    }).catch((err) => {
+        console.log(err)
+    });
+    });
+
+    function Objectupdate() {
+        customerID = document.getElementById('cus_id').value
+        shopName = document.getElementById('usernameID').value
+        branch = document.getElementById('branchID').value
+        branch_detail = document.getElementById('detailID').value
+        tel = document.getElementById('telid').value
+        sakadetail = document.getElementById('sakadetailID').value
+        telCanconnect = document.getElementById('telCanconnect').value
+        position_map = document.getElementById('position_map').value
+        no_shop = document.getElementById('no_shopID').value
+        province = document.getElementById('provinceID').value
+        district = document.getElementById('districtID').value
+        tumbon = document.getElementById('tumbonID').value
+        zipcode = document.getElementById('zipcode').value
+        return {
+            customerID: customerID,
+            shopName: shopName,
+            branch: branch,
+            branch_detail: branch_detail,
+            tel: tel,
+            sakadetail: sakadetailID,
+            telCanconnect: telCanconnect,
+            position_map: position_map,
+            no_shop: no_shop,
+            province: province,
+            district: district,
+            tumbon: tumbon,
+            zipcode: zipcode
+        }
+    }
+
+//         var data = [[{
+//     "customerID": "1111",
+//     "shopName": "เลิฟมีเทนเดอร์",
+//     "branch": "สำนักงานใหญ่ 1",
+//     "username": "admin123",
+//     "status": "open",
+//     "branch_detail": "การทำน้อยกว่าที่ทำย้อมดีกว่าไม่ทำอะไรเลย",
+//     "tel": "08x-xxxx-xxx",
+//     "typeShope": "{\"storeFront\":\"yes\",\"typeShope\":\"ร้านขายเครื่องสำอาง\"}"
+// }
 </script>
