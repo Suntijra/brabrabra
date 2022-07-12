@@ -8,7 +8,7 @@ app.use(bodyParser.json());
 app.use(cors());
 const port = 3000
 app.listen(port, () => console.log(`Example app listening on port ${port}!`))
-app.post('/api/Shopsakainfo', (req, resp) => {
+app.post('/api/merchant/Shopsakainfo', (req, resp) => {
     try {
         return resp.status(200).json(
             {
@@ -27,12 +27,12 @@ app.post('/api/Shopsakainfo', (req, resp) => {
 })
 // <---------------------------------------- Team Dom ---------------------------------------->
 var adddata = []
-app.post('/api/addsaka', (req, resp) => {
+app.post('/api/merchant/addsaka', (req, resp) => {
     let user = req.body.user
     let pwd = req.body.password
     let bnname = req.body.bnname
     let detail = req.body.detail
-    let tel = req.body.tel
+    let tel = req.body.tels
     let bndetail = req.body.bndetail
     let contact = req.body.contact
     let location = req.body.location
@@ -73,7 +73,7 @@ app.post('/api/addsaka', (req, resp) => {
     }
 
 })
-app.post('/api/updatainfo', (req, resp) => {
+app.post('/api/merchant/updatainfo', (req, resp) => {
     try {
         let obj = req.body.obj
         console.log(obj)

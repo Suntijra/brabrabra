@@ -210,7 +210,7 @@
     const cus_id = url.searchParams.get("id");
     console.log(cus_id)
     var info;
-    axios.post('http://192.168.1.18:3000/api/Shopsakainfo').then((result) => {
+    axios.post('http://192.168.1.18:3000/api/merchant/Shopsakainfo').then((result) => {
         data = result.data.data;
         console.log(data[0].length)
         // console.log(data)

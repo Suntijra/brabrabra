@@ -311,7 +311,7 @@
 
 
     document.getElementById("btn_save").addEventListener("click", function(){
-        axios.post('http://192.168.1.18:3000/api/updatainfo', {
+        axios.post('http://192.168.1.18:3000/api/merchant/updatainfo', {
         obj: Objectupdate()
     }).then((result) => {
         console.log(result)
