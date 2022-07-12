@@ -255,7 +255,7 @@
                 console.log(value)
             }
         }
-
+        var datasent
         function updateshopinfo(){
             var Name = $('#merchant_name').val()
             var About = $('#merchant_detail').val()
@@ -269,7 +269,7 @@
             var zone = $('#merchant_city3').val()
             var post_office_code = $('#merchant_city4').val()
 
-            var datasent =  {
+            datasent =  {
                 "Name":Name,
                 "About":About,
                 "Host":Host,
@@ -289,6 +289,7 @@
             data:datasent
             ,success:function(res){
                 console.log(res)
+                console.log("===============>",datasent)
             },error: function(error){
                 console.log(error)
             }

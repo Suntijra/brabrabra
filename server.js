@@ -3,7 +3,7 @@ const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
 const { add } = require('nodemon/lib/rules');
-
+var _ = require('lodash');
 app.use(bodyParser.json());
 app.use(cors());
 const port = 3000
@@ -297,43 +297,49 @@ app.post('/api/merchant/shopinfo', (req, res) => {
 })
 
 app.post('/api/merchant/updateshopinfo', (req, res) => {
-    var Name = _.get(req, ["body", "Name"]);
-    var About = _.get(req, ["body", "About"]);
-    var Host = _.get(req, ["body", "Host"]);
-    var Tel = _.get(req, ["body", "Tel"]);
-    var Email = _.get(req, ["body", "Email"]);
-    var logoshop = _.get(req, ["body", "logoshop"]);
-    var location = _.get(req, ["body", "location"]);
-    var amount = _.get(req, ["body", "amount"]);
-    var district = _.get(req, ["body", "district"]);
-    var zone = _.get(req, ["body", "zone"]);
-    var post_office_code = _.get(req, ["body", "post_office_code"]);
-    console.log('Name', Name)
-    console.log('About', About)
-    console.log('Host', Host)
-    console.log('Tel', Tel)
-    console.log('Email', Email)
-    console.log('logoshop', logoshop)
-    console.log('location', location)
-    console.log('amount', amount)
-    console.log('About', district)
-    console.log('zone', zone)
-    console.log('About', post_office_code)
+    try{
+        var Name = _.get(req, ["body", "Name"]);
+        var About = _.get(req, ["body", "About"]);
+        var Host = _.get(req, ["body", "Host"]);
+        var Tel = _.get(req, ["body", "Tel"]);
+        var Email = _.get(req, ["body", "Email"]);
+        var logoshop = _.get(req, ["body", "logoshop"]);
+        var location = _.get(req, ["body", "location"]);
+        var amount = _.get(req, ["body", "amount"]);
+        var district = _.get(req, ["body", "district"]);
+        var zone = _.get(req, ["body", "zone"]);
+        var post_office_code = _.get(req, ["body", "post_office_code"]);
+        console.log('Name', Name)
+        console.log('About', About)
+        console.log('Host', Host)
+        console.log('Tel', Tel)
+        console.log('Email', Email)
+        console.log('logoshop', logoshop)
+        console.log('location', location)
+        console.log('amount', amount)
+        console.log('About', district)
+        console.log('zone', zone)
+        console.log('About', post_office_code)
+        
     
-
-    var Data = {
-        Name: Name,
-        Host: Host,
-        About: About,
-        Tel:Tel,
-        Email:Email,
-        logoshop:logoshop,
-        location:location,
-        amount:amount,
-        district:district,
-        zone: zone,
-        post_office_code: post_office_code
-
+        let Data_info = {
+            Name: Name,
+            Host: Host,
+            About: About,
+            Tel:Tel,
+            Email:Email,
+            logoshop:logoshop,
+            location:location,
+            amount:amount,
+            district:district,
+            zone: zone,
+            post_office_code: post_office_code
+    
+        }
+        return res.status(200).json({ms: "Good",result: Data_info})
+    }catch(err){
+        return res.status(500).json({ms: "Bad",result: "Fail"})
     }
-    return res.status(200).json({ms: "Good",result: Data})
+   
+   
 })
