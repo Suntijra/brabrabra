@@ -92,7 +92,6 @@ app.post('/api/merchant/updatainfo', (req, resp) => {
             status: "fail",
         })
     }
-
 })
 app.post('/api/merchant/branch/update/status', (req, resp) => {
     try {
