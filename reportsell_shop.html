@@ -416,7 +416,7 @@
                         <div class="reportsell_02_all_shop">
                                     <div class="reportsell_03_all_shop">
                                         <p class="h2 BB primary-text-salmon font_Prompt">รายรับรวมวันนี้</p>
-                                        <p class="h0 BB font_Prompt">300,000,000.0</p>
+                                        <p id="amountall" class="h0 BB font_Prompt"></p>
                                         <p class="h5 font_Prompt">
                                             <i class="fas fa-arrow-left" ></i> 
                                             อัพเดตเมื่อ</p>
@@ -1268,7 +1268,6 @@ $.ajax(settings1).done(function (response) {
                     }
                 }
             }
-            console.log("date",dateS)
             html += `
                     <div class="reportsell_23_shop ${res[i].status == "สำเร็จ" ? "reportdone_detail_minitap" : "reportcancel_detail_minitap"}">
                         <div class="reportsell_24_shop">
@@ -1333,6 +1332,7 @@ $.ajax(settings1).done(function (response) {
         $('#report_income').append(html)
         $('#report_all').append(all_income)
         $('#amountincome').text(amount)
+        amountresult = amount;
 });
 
 
@@ -1349,6 +1349,7 @@ $.ajax(settings1).done(function (response) {
   }),
 };
 
+var amountresult = 0;
 $.ajax(settings).done(function (response) {
   console.log(response);
   var res = response;
@@ -1356,7 +1357,7 @@ $.ajax(settings).done(function (response) {
                 var all_withdraw = ``;
                 var amount = 0;
                 var reslenght = Object.keys(response).length;
-
+                var totalall = 0;
 
 
                 for(var i = 0; i < reslenght; i++){
@@ -1386,8 +1387,6 @@ $.ajax(settings).done(function (response) {
                             }
                         }
                     }
-                    console.log("date",dateS)
-
 
                     html +=`
                         <div class="reportsell_15_withd_shop ${res[i].status == "สำเร็จ" ? "withdraw_success_minitap" : "withdraw_cancel_minitap"}">
@@ -1444,6 +1443,9 @@ $.ajax(settings).done(function (response) {
                 $('#report_withdraw').html(html);
                 $('#report_all').append(all_withdraw);
                 $('#amountwithdraw').text(amount);
+                amount += amountresult;
+                $('#amountall').text(amount)
+
             
 });
 
