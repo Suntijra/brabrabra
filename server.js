@@ -25,7 +25,7 @@ app.post('/api/Shopsakainfo', (req, resp) => {
     }
 
 })
-
+// <---------------------------------------- Team Dom ---------------------------------------->
 var adddata = []
 app.post('/api/addsaka', (req, resp) => {
     let user = req.body.user
@@ -86,6 +86,18 @@ app.post('/api/updatainfo', (req, resp) => {
         return resp.status(200).json({
             status: "ok",
         })
+    } catch (error) {
+        console(error)
+        return resp.status(500).json({
+            status: "fail",
+        })
+    }
+
+})
+app.post('/api/merchant/branch/update/status', (req, resp) => {
+    try {
+        let data = req.body.data
+        console.log(data)
     } catch (error) {
         console(error)
         return resp.status(500).json({

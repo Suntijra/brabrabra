@@ -161,17 +161,19 @@
     //     console.log('++++++++++++++++++++++++++')
     //     console.log(resp);
     // })
-
+    var datalengeh = 0;
+    var datacusID = []
     $.ajax({
         method: 'post',
         url: 'http://192.168.1.18:3000/api/Shopsakainfo',
         success: (response) => {
             data = response.data
-            console.log(data)
+            datalengeh = data[0].length
             if (response.status == 'ok') {
                 console.log(data[0].length)
                 var htmlInner = '';
                 for (let i = 0; i < data[0].length; i++) {
+                    datacusID.push(data[0][i].customerID)
                     htmlInner += `<div class="BNInfoContainer shadow-test">
                 <div class="BNInfoTop">
                     <img src="imgs/shop-icon.png" alt="shop-icon" class="BNInfoShopIcon">
@@ -189,7 +191,7 @@
                         <i class="fa-solid fa-chevron-right"></i>
                     </div>
                     <div class="onoffswitch">
-                        <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="${i}myonoffswitch"
+                        <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="${i}myonoffswitch" onchange="switchChange(this.id,${data[0][i].customerID});"
                             tabindex="0" checked>
                         <label class="onoffswitch-label" for="${i}myonoffswitch">
                             <span class="onoffswitch-inner"></span>
@@ -198,28 +200,60 @@
                     </div>
 
                 </div>
-            </div>`   
+            </div>`
                 }
                 document.getElementById("frontdata").innerHTML = htmlInner
                 for (let i = 0; i < data[0].length; i++) {
                     if (data[0][i].status == 'open') {
-                        document.getElementById(i+'myonoffswitch').checked = true
+                        document.getElementById(i + 'myonoffswitch').checked = true
                     } else {
-                        document.getElementById(i+'myonoffswitch').checked = false
+                        document.getElementById(i + 'myonoffswitch').checked = false
                     }
                 }
-                // document.getElementById("demo").innerHTML = html;
+
             } else {
-                console.log('ลง else')
+                console.log('ติดต่อหลังบ้านไม่ได้')
             }
         },
         error: function (err) {
             console.log(err)
         }
     })
-    function showinfo(e){
-        
-        window.location.href = "./BN_info.html?id="+e.id
+    
+    // for(let i = 0 ;i<datalengeh;i++){
+    //     document.getElementById(i+'myonoffswitch').addEventListener('change',switchChange(i+'myonoffswitch',datacusID[i]))
+    // }
+
+
+    function switchChange(eid,cusID) {
+        console.log(eid)
+        let dataForUpdate = {
+            customerID: '',
+            status: ''
+        }
+        let status = document.getElementById(eid).checked
+        console.log(status)
+        if (status == true) {
+            console.log("111")
+            dataForUpdate.customerID = cusID
+            dataForUpdate.status = 'open'
+        } else {
+            console.log("222")
+            dataForUpdate.customerID = cusID
+            dataForUpdate.status = 'close'
+        }
+        axios.post("http://192.168.1.18:3000/api/merchant/branch/update/status",{
+            data : dataForUpdate
+        }).then((result) => {
+            console.log(result)
+            console.log(updated)
+        }).catch((err) => {
+            console.log(err)
+        });
+
+    }
+    function showinfo(e) {
+        window.location.href = "./BN_info.html?id=" + e.id
     }
     // window.location.href = "./BN_info.html/product=shirt&color=blue&newuser&size=m"
 </script>
