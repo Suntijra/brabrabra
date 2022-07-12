@@ -1,125 +1,169 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width"/>
-        <title>Login</title>
-        <!-- font -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@400;700&display=swap" rel="stylesheet">
-        <link href="http://fonts.cdnfonts.com/css/gilroy-bold" rel="stylesheet">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Prompt&display=swap" rel="stylesheet">
-        <!-- css -->
-        <link rel="stylesheet" type="text/css" href="./globle_newmerchant.css"/>
-        <link rel="stylesheet" type="text/css" href="./slick-1.8.1/slick/slick.css"/>
-        <link rel="stylesheet" type="text/css" href="./slick-1.8.1/slick/slick-theme.css"/>
 
-        <!-- script -->
-        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-        <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-        <script type="text/javascript" src="./slick-1.8.1/slick/slick.min.js"></script>
-        <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width" />
+    <title>Login</title>
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@400;700&display=swap" rel="stylesheet">
+    <link href="http://fonts.cdnfonts.com/css/gilroy-bold" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt&display=swap" rel="stylesheet">
+    <!-- css -->
+    <link rel="stylesheet" type="text/css" href="./globle_newmerchant.css" />
+    <link rel="stylesheet" type="text/css" href="./slick-1.8.1/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="./slick-1.8.1/slick/slick-theme.css" />
 
-    </head>
-    
-   
-    <body>
-        <div class="container  bg3_regis" >
-            <div class="head_button "  >
-                <div class="back_button">
-                    <i class="fas fa-arrow-left" ></i>
-                </div>
+    <!-- script -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script type="text/javascript" src="./slick-1.8.1/slick/slick.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Axios -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+</head>
+
+
+<body>
+    <div class="container  bg3_regis">
+        <div class="head_button ">
+            <div class="back_button">
+                <i class="fas fa-arrow-left"></i>
             </div>
-            <div  class="head_regisniti">
-             
-                <div  class="padding_box_regis" >
-                    <p class="h1 font_Prompt primary-text-white BB" >เข้าสู่ระบบ</p>
-                    <p class="h5 font_Prompt primary-text-white" >โปรดกรอกข้อมูลด้านล่าง เพื่อเข้าสู่ระบบ</p>
-                </div>
+        </div>
+        <div class="head_regisniti">
+
+            <div class="padding_box_regis">
+                <p class="h1 font_Prompt primary-text-white BB">เข้าสู่ระบบ</p>
+                <p class="h5 font_Prompt primary-text-white">โปรดกรอกข้อมูลด้านล่าง เพื่อเข้าสู่ระบบ</p>
             </div>
-            <div class="box_regis2">
-                <div class="body_regisniti1 bg_regis"  >
-                    <div class="paddingbottom_box">
-                        <div class="h5_half font_Prompt BB padding_box"  >ชื่อผู้ใช้งาน</div>
-                        <div class="box_regis1">
-                            <img class="icon_regis1" src="./imgs/user2.png" alt="" >
-                            <input id="username"   class="boxinput_regis font_Prompt h5_half"  name="num" placeholder="กรอกชื่อผู้ใช้งาน" >                       
-                       </div>
+        </div>
+        <div class="box_regis2">
+            <div class="body_regisniti1 bg_regis">
+                <div class="paddingbottom_box">
+                    <div class="h5_half font_Prompt BB padding_box">ชื่อผู้ใช้งาน</div>
+                    <div class="box_regis1">
+                        <img class="icon_regis1" src="./imgs/user2.png" alt="">
+                        <input id="username" class="boxinput_regis font_Prompt h5_half" name="num"
+                            placeholder="กรอกชื่อผู้ใช้งาน">
                     </div>
-                    <div class="bottomregis_input">
-                        <div class="h5_half font_Prompt BB padding_box"  >รหัสผ่าน</div>
-                        <div class="box_regis1">
-                            <img class="icon_regis1" src="./imgs/password.png" alt="" >
-                            <input id="password"  class="boxinput_regis font_Prompt h5_half" name="num" placeholder="กรอกรหัสผ่าน" >  
-                            <img  class="icon_regis3"src="./imgs/eye1.png" alt="" >                     
-                       </div>
-                    <div class="h5_half font_Prompt primary-text-salmon text_forgotpass " >ลืมรหัสผ่าน?</div>
+                </div>
+                <div class="bottomregis_input">
+                    <div class="h5_half font_Prompt BB padding_box">รหัสผ่าน</div>
+                    <div class="box_regis1">
+                        <img class="icon_regis1" src="./imgs/password.png" alt="">
+                        <input id="password" class="boxinput_regis font_Prompt h5_half" name="num"
+                            placeholder="กรอกรหัสผ่าน">
+                        <img class="icon_regis3" src="./imgs/eye1.png" alt="">
                     </div>
-                    <div class="bottomregis_input">
-                        <div class="button_regis">
-                            <div onclick="loginmerchant()" class="salmon_button_regis1 h4_half   " >
-                                <p class="BB font_Prompt primary-text-white ">เข้าสู่ระบบ</p>
-                            </div>
+                    <div class="h5_half font_Prompt primary-text-salmon text_forgotpass ">ลืมรหัสผ่าน?</div>
+                </div>
+                <div class="bottomregis_input">
+                    <div class="button_regis">
+                        <div onclick="loginmerchant()" class="salmon_button_regis1 h4_half   ">
+                            <p class="BB font_Prompt primary-text-white ">เข้าสู่ระบบ</p>
                         </div>
                     </div>
-                
-                        
                 </div>
-                 <div class="h5_half font_Prompt BB login_1" >ยังไม่เคยเปิดร้าน? <p class="primary-text-salmon text_login_regis" >ลงทะเบียน</p></div>
-                </div>
-            
-               
-            
 
+
+            </div>
+            <div class="h5_half font_Prompt BB login_1">ยังไม่เคยเปิดร้าน? <p
+                    class="primary-text-salmon text_login_regis">ลงทะเบียน</p>
+            </div>
         </div>
-        <script>
-        
-            function loginmerchant() {
-            var username = $('#username').val() 
+
+
+
+
+    </div>
+    <script>
+
+        async function loginmerchant() {
+
+            let username = $('#username').val()
             // console.log('1234',username)
+            console.log('>>>>>>>>>>>>>>>>>>>.', username)
             console.log("WTFFFF")
-            $.ajax({
-                url:'http://192.168.1.18:3000/api/loginmerchant',
-                type:'post',
-                data:{
-                    username: username
-                },
-                success:function(response){
-                    console.log("xxxxx",response)
-                    if(response.status == 'good'){
-                        if(response.data == 'admin'){
-                            console.log("success admin !!!")
-                            // $('.overlay_home_shop').addClass("open");
-                            window.open('./home.html','_self')
-                            
 
-                        }
-                        else if(response.data == 'shopee'){
-                            console.log("success !!!")
-                            
-                            window.open('./home_branch.html','_self')
-                        }
-                        else if(response.data == 'oilmerchant'){
-                            console.log("success !!!")
-                           
-                            // window.open('./home.html','_self')
-                            alert("go oilmerchant page")
-                        }
+            axios.post("http://192.168.1.18:3000/api/loginmerchant", {
+                username: username
+            }).then(response => {
+                console.log("xxxxx", response.data)
+                response = response.data
+                if (response.status == 'good') {
+                    if (response.data == 'admin') {
+                        console.log("success admin !!!")
+                        // $('.overlay_home_shop').addClass("open");
+                        window.open('./home.html', '_self')
+
+
                     }
-    
-                },error: function(error){
-                    console.log("error!!",error)
+                    else if (response.data == 'shopee') {
+                        console.log("success !!!")
+
+                        window.open('./home_branch.html', '_self')
+                    }
+                    else if (response.data == 'oilmerchant') {
+                        console.log("success !!!")
+
+                        // window.open('./home.html','_self')
+                        alert("go oilmerchant page")
+                    }
                 }
+
+            }).catch(err => {
+                console.log(err)
             })
+            // $.ajax({
+            //     url: 'http://192.168.1.18:3000/api/loginmerchant',
+            //     type: 'post',
+            //     data: {
+            //         username: 'admin'
+            //     },
+            //     success: function (response) {
+            //         console.log("xxxxx", response)
+            //         if (response.status == 'good') {
+            //             if (response.data == 'admin') {
+            //                 console.log("success admin !!!")
+            //                 // $('.overlay_home_shop').addClass("open");
+            //                 window.open('./home.html', '_self')
 
-            }
-        </script>
-    </body>
-    
+
+            //             }
+            //             else if (response.data == 'shopee') {
+            //                 console.log("success !!!")
+
+            //                 window.open('./home_branch.html', '_self')
+            //             }
+            //             else if (response.data == 'oilmerchant') {
+            //                 console.log("success !!!")
+
+            //                 // window.open('./home.html','_self')
+            //                 alert("go oilmerchant page")
+            //             }
+            //         }
+
+            //     }, error: function (error) {
+            //         console.log("error!!", error)
+            //     }
+            // })
+
+        }
+    </script>
+</body>
+
 </html>
-
