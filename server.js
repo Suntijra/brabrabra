@@ -270,3 +270,70 @@ app.post('/api/merchant/report/income', (req, res) => {
         }
     }
 })
+
+//<----------------------- Pruck ------------------------------------------->
+
+app.post('/api/merchant/shopinfo', (req, res) => {
+    var Name = _.get(req, ["body", "Name"]);
+    var About = _.get(req, ["body", "About"]);
+    console.log('Name', Name)
+    console.log('About', About)
+
+    var Data = {
+        Name: "KFC",
+        Host: "Peter",
+        About: "Good Food Good Lift",
+        Tel:"09-1111-111",
+        Email:"Peter@Hotmail.co.th",
+        logoshop:"logo.jpg",
+        location:"600/6000 ซ.ไผ่สวย",
+        amount:"1",
+        district:"2",
+        zone: "3",
+        post_office_code: "1999"
+
+    }
+    return res.status(200).json({ms: "Good",result: Data})
+})
+
+app.post('/api/merchant/updateshopinfo', (req, res) => {
+    var Name = _.get(req, ["body", "Name"]);
+    var About = _.get(req, ["body", "About"]);
+    var Host = _.get(req, ["body", "Host"]);
+    var Tel = _.get(req, ["body", "Tel"]);
+    var Email = _.get(req, ["body", "Email"]);
+    var logoshop = _.get(req, ["body", "logoshop"]);
+    var location = _.get(req, ["body", "location"]);
+    var amount = _.get(req, ["body", "amount"]);
+    var district = _.get(req, ["body", "district"]);
+    var zone = _.get(req, ["body", "zone"]);
+    var post_office_code = _.get(req, ["body", "post_office_code"]);
+    console.log('Name', Name)
+    console.log('About', About)
+    console.log('Host', Host)
+    console.log('Tel', Tel)
+    console.log('Email', Email)
+    console.log('logoshop', logoshop)
+    console.log('location', location)
+    console.log('amount', amount)
+    console.log('About', district)
+    console.log('zone', zone)
+    console.log('About', post_office_code)
+    
+
+    var Data = {
+        Name: Name,
+        Host: Host,
+        About: About,
+        Tel:Tel,
+        Email:Email,
+        logoshop:logoshop,
+        location:location,
+        amount:amount,
+        district:district,
+        zone: zone,
+        post_office_code: post_office_code
+
+    }
+    return res.status(200).json({ms: "Good",result: Data})
+})
