@@ -342,3 +342,42 @@ app.post('/api/merchant/updateshopinfo', (req, res) => {
    
    
 })
+
+// <---------------------------------------mheepooh--------------------------------->
+app.post('/api/loginmerchant' , (req,resp) => {
+    var username = _.get(req,['body','username']);
+    console.log('WTF!',username)
+
+    try{
+        
+        if (username == 'admin'){
+            return resp.status(200).json({
+                data : username,
+                status: 'good'
+            }) 
+        }else if(username == 'shopee'){
+            return resp.status(200).json({
+                data : username,
+                status: 'good'
+            })
+        }else if(username == 'oilmerchant'){ 
+            return resp.status(200).json({
+                data : username,
+                status: 'good'
+            })
+        }
+        
+            
+        else{
+            return resp.status(200).json({
+                status: 'bad',
+                CODE : '500',
+                data : username
+            })
+        }
+      
+    }
+    catch(err){
+        console.log(err)
+    }
+})
