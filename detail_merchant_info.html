@@ -35,7 +35,7 @@
         <div class=" bg5_regisniti">
                 <div class="head_button just_spacebetween container-regis" >
                     <!-- ปุ่มกลับ -->
-                    <div class="backReportsell_button">
+                    <div onclick="Home()" class="backReportsell_button">
                         <i class="fas fa-arrow-left" ></i>
                     </div> 
                     <!-- ปุ่มโฮม -->
@@ -49,7 +49,6 @@
                        
                     </div>
                 </div>
-
         <div class="scroll_merchantinfo" >
                     <!-- 1 -->
                    <div class="bg_content_merchantinfo" >
@@ -58,7 +57,7 @@
                             <label class="h4 font_Prompt" >ชื่อร้านค้า (ภาษาไทย) <span class="primary-text-salmon h5_half">*</span></label>
                         </div>
                         <div class="box_detailinfo">
-                            <input class="boxinput_detailinfo" name="num" >                       
+                            <input id="merchant_name" class="boxinput_detailinfo" name="num" >                       
                         </div>
                 </div>
                 <div class="marginbox"  >
@@ -66,7 +65,7 @@
                         <label class="h4 font_Prompt" >รายละเอียด <span class="primary-text-salmon h5_half">*</span></label>
                     </div>
                     <div class="box_detailinfobig">
-                        <input class="boxinput_detailinfo" name="num" >                       
+                        <input id="merchant_detail" class="boxinput_detailinfo" name="num" >                       
                     </div>
                  </div>
                 <div class="marginbox"  >
@@ -74,7 +73,7 @@
                         <label class="h4 font_Prompt" >ผู้ที่สามารถติดต่อได้ <span class="primary-text-salmon h5_half">*</span></label>
                     </div>
                     <div class="box_detailinfo">
-                        <input class="boxinput_detailinfo" name="num" >                       
+                        <input id="merchant_padding" class="boxinput_detailinfo" name="num" >                       
                     </div>
                     </div>
                     <div class="marginbox"  >
@@ -82,7 +81,7 @@
                             <label class="h4 font_Prompt" >เบอร์โทรร้านค้า <span class="primary-text-salmon h5_half">*</span></label>
                         </div>
                         <div class="box_detailinfo">
-                            <input class="boxinput_detailinfo" name="num" >                       
+                            <input id="merchant_tell" class="boxinput_detailinfo" name="num" >                       
                         </div>
                     </div>
                     <div class="marginbox"  >
@@ -90,7 +89,7 @@
                             <label class="h4 font_Prompt" >อีเมล <span class="primary-text-salmon h5_half">*</span></label>
                         </div>
                         <div class="box_detailinfo">
-                            <input class="boxinput_detailinfo" name="num" >                       
+                            <input id="merchant_email" class="boxinput_detailinfo" name="num" >                       
                         </div>
                     </div>
                     <div class="marginbox"  >
@@ -98,7 +97,7 @@
                             <label class="h4 font_Prompt" >โลโก้ของร้าน <span class="primary-text-salmon h5_half">*</span></label>
                         </div>
                         <div class="box_detailinfobig">
-                            <input class="boxinput_detailinfo" name="num" >                       
+                            <input id="merchant_logo" class="boxinput_detailinfo" name="num" >                       
                         </div>
                     </div>
                     <div class="marginbox"  >
@@ -106,7 +105,7 @@
                             <label class="h4 font_Prompt" >ที่อยู่ร้านค้า <span class="primary-text-salmon h5_half">*</span></label>
                         </div>
                         <div class="box_detailinfo">
-                            <input class="boxinput_detailinfo" name="num" >                       
+                            <input id="merchant_address" class="boxinput_detailinfo" name="num" >                       
                         </div>
                      </div>
                      <div class="marginbox" >
@@ -114,7 +113,7 @@
                             <label class="h4 font_Prompt  " >จังหวัด <span class="primary-text-salmon h5_half">*</span></label> 
                         </div>
                                     <div class="box_detailinfo ">
-                                        <select class="dropdown_border_box"    >
+                                        <select id="merchant_city" class="dropdown_border_box"    >
                                             <option value="1">1</option>
                                             <option value="2">2</option>
                                             <option value="3">3</option>
@@ -127,7 +126,7 @@
                             <label class="h4 font_Prompt  " >เขต/อำเภอ <span class="primary-text-salmon h5_half">*</span></label> 
                         </div>
                             <div class="box_detailinfo ">
-                                <select class="dropdown_border_box"    >
+                                <select id="merchant_city2" class="dropdown_border_box"    >
                                     <option value="1">1</option>
                                     <option value="2">2</option>
                                     <option value="3">3</option>
@@ -140,7 +139,7 @@
                             <label class="h4 font_Prompt  " >แขวง/ตำบล <span class="primary-text-salmon h5_half">*</span></label> 
                         </div>
                             <div class="box_detailinfo ">
-                                <select class="dropdown_border_box"    >
+                                <select id="merchant_city3" class="dropdown_border_box"    >
                                     <option value="1">1</option>
                                     <option value="2">2</option>
                                     <option value="3">3</option>
@@ -153,7 +152,7 @@
                             <label class="h4 font_Prompt" >รหัสไปรษณีย์ <span class="primary-text-salmon h5_half">*</span></label>
                         </div>
                         <div class="box_detailinfo">
-                            <input class="boxinput_detailinfo" name="num" >                       
+                            <input id="merchant_city4" class="boxinput_detailinfo" name="num" >                       
                         </div>
                      </div>
                    </div>
@@ -200,7 +199,7 @@
         
     
             <div class="bg_button_merchantinfo">
-                    <div class="salmonlong_button_merchantinfo">
+                    <div onclick="updateshopinfo()" class="salmonlong_button_merchantinfo">
                         <span class="regis-shop-info-next-text h3 font_Prompt  BB primary-text-white ">บันทึก</span>
                     </div>
     
@@ -213,4 +212,90 @@
         </div>
        
     </body>
+
+    <script>
+
+        function Home(){
+            console.log('click')
+            window.open("./home.html", "_parent")
+        }
+
+        $.ajax({ 
+            type:'post',
+            url: "http://192.168.1.18:3000/api/merchant/shopinfo",
+
+            success: function (response){
+                if(response.ms === "Good"){
+                    console.log(response.result)  
+                    $('#merchant_name').val(response.result.Name)
+                    $('#merchant_detail').val(response.result.About)
+                    $('#merchant_padding').val(response.result.Host)
+                    $('#merchant_tell').val(response.result.Tel)
+                    $('#merchant_email').val(response.result.Email)
+                    $('#merchant_logo').val(response.result.logoshop)
+                    $('#merchant_address').val(response.result.location)
+                    $('#merchant_city').val(response.result.amount)
+                    $('#merchant_city2').val(response.result.district)
+                    $('#merchant_city3').val(response.result.zone)
+                    $('#merchant_city4').val(response.result.post_office_code)
+                }else{
+                    alert("Error")
+                }
+            },error: function (error){
+                console.log("error",error)
+            }
+
+        })
+
+        var value = "new"
+        function a1(param){
+            if(param){
+                value = param
+            }else{
+                console.log(value)
+            }
+        }
+        var datasent
+        function updateshopinfo(){
+            var Name = $('#merchant_name').val()
+            var About = $('#merchant_detail').val()
+            var Host = $('#merchant_padding').val()
+            var Tel = $('#merchant_tell').val()
+            var Email = $('#merchant_email').val()
+            var logoshop = $('#merchant_logo').val()
+            var location = $('#merchant_address').val()
+            var amount = $('#merchant_city').val()
+            var district = $('#merchant_city2').val()
+            var zone = $('#merchant_city3').val()
+            var post_office_code = $('#merchant_city4').val()
+
+            datasent =  {
+                "Name":Name,
+                "About":About,
+                "Host":Host,
+                "Tel":Tel,
+                "Email":Email,
+                "logoshop":logoshop,
+                "location":location,
+                "amount":amount,
+                "district":district,
+                "zone":zone,
+                "post_office_code":post_office_code,
+            }
+
+            $.ajax({
+            type:'post',
+            url: 'http://192.168.1.18:3000/api/merchant/updateshopinfo',
+            data:datasent
+            ,success:function(res){
+                console.log(res)
+                console.log("===============>",datasent)
+            },error: function(error){
+                console.log(error)
+            }
+
+            })
+        }
+
+    </script>
 </html>
