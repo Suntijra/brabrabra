@@ -345,7 +345,7 @@ app.post('/api/merchant/updateshopinfo', (req, res) => {
 
 // <---------------------------------------mheepooh--------------------------------->
 app.post('/api/loginmerchant' , (req,resp) => {
-    var username = _.get(req,['body','username']);
+    let username = req.body.username;
     console.log('WTF!',username)
 
     try{
@@ -378,6 +378,10 @@ app.post('/api/loginmerchant' , (req,resp) => {
       
     }
     catch(err){
-        console.log(err)
+        return resp.status(200).json({
+            status: 'bad',
+            CODE : '500',
+            data : username
+        })
     }
 })
